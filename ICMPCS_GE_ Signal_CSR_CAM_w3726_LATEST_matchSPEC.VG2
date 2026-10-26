@@ -1,0 +1,3558 @@
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","No"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","No"
+"TERMINAL:","Yes"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:","ICMPCS_GE_Signal_CSR_CAM.zip"
+"EXCEL:","out_25980.tab"
+"ROW:","No"
+"EMBED:","Y"
+"JOINDUCKDB:","N"
+"INCNESTUTIL:","N"
+"QUERYROWS:","0"
+"JOINROWS:","0"
+"FILTERROWS:","0"
+"COL_ID_COUNTER:","0"
+"CHART_COUNTER:","0"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","2"
+"CL_SITE","KM</@#;><<<CL_SITE>>>"
+"STUCK","5</@#;><<<STUCK>>>"
+"LIMIT","0.25</@#;><<<LIMIT>>>"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Pre/Post Query:Y{Config File Preparation}</@#;>Config File Preparation"
+"UTILITIESDESC:","processing config file"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Start-Macro:Y{START-MACRO} <~>configsets.csv<~> <~>N<~>"
+"UTILITIESDESC:","Apply variables from config file"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Pre/Post Query:Y{lot_list}</@#;>lot_list"
+"UTILITIESDESC:","core logic"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rows-In-File:Y{ROWS-IN-FILE} <~>cam_lot_list.csv<~> <~>RowsInFile<~> <~>N<~> <~><~>"
+"UTILITIESDESC:","Count Rows in a File"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>RowsInFile<~> <~>GT<~> <~>0<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","Apply Conditional Logic"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Pre/Post Query:Y{unit_level_data}</@#;>unit_level_data"
+"UTILITIESDESC:","core logic cont"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Pre/Post Query:Y{analysis}</@#;>analysis"
+"UTILITIESDESC:","core logic cont"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Pre/Post Query:Y{final_data}</@#;>final_data"
+"UTILITIESDESC:","core logic cont"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Pre/Post Query:Y{theta_repeat_email}</@#;>theta_repeat_email"
+"UTILITIESDESC:","Email-only repeating theta outliers by grouping and test end time"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>VAR(<<<CL_SITE>>>)<~> <~>EQS<~> <~>KM<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","Apply Conditional Logic"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Pre/Post Query:Y{unit_kill}</@#;>unit_kill"
+"UTILITIESDESC:","Pre/Post Query"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Pre/Post Query:N{unit_kill_final}</@#;>unit_kill_final"
+"UTILITIESDESC:","Pre/Post Query"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Pre/Post Query:N{CSR and History File Processing}</@#;>CSR and History File Processing"
+"UTILITIESDESC:","CSR and History file handler"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Pre/Post Query:N{Workflow and MMS Processing}</@#;>Workflow and MMS Processing"
+"UTILITIESDESC:","MMS handler"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Pre/Post Query:Y{Update}</@#;>Update"
+"UTILITIESDESC:","update upon completion - do not delete / disable"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-Macro:Y{END-MACRO}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"JOINGRID:"
+"FILTERGRID:"
+/START_EMBED_ALL
+/EMBED=VG2;CSR
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","Yes"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","Yes"
+"TERMINAL:","No"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:",""
+"EXCEL:","RESULT_MICJ_.csv"
+"ROW:","No"
+"EMBED:","Y"
+"INCNESTUTIL:","N"
+"QUERYROWS:","7"
+"JOINROWS:","0"
+"FILTERROWS:","0"
+"COL_ID_COUNTER:","24"
+"CHART_COUNTER:","4"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","0"
+"CL_SITE","PG</@#;><<<CL_SITE>>>"
+"<---- New Query ---->","1:5:SQL"
+"TABLEGRID:","1"
+"","MICJCSR.csv a0",""
+"MARSNODE:","Default"
+"ARIESNODE:","Default"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","Default"
+"DATABASETYPE:","SQLite"
+"SINGLENODE:","TEXT (SQLite)"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Create mandantory fields for CSR hold"
+"DISTINCT:","Yes"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"PREPROCESS_CSV:","Yes"
+"NOHDRS:","No"
+"CARTESIAN:","No"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rows-In-File:Y{ROWS-IN-FILE} <~>RESULT_MICJ_.csv<~> <~>CSR<~> <~>N<~>"
+"UTILITIESDESC:","Check if got CSR signal"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>CSR<~> <~>GT<~> <~>0<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","If true then activate CSR"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rename:Y@EXEDIR@\SPFRename.va <~>RESULT_MICJ_.csv<~> <~>RESULT_<<<%username%>>>_<<<DCCB>>>_MICJ_<TS>.csv<~>"
+"UTILITIESDESC:","add timestamps"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>VAR(<<<DCSR>>>)<~> <~>EQS<~> <~>Y<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","Apply Conditional Logic"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>VAR(<<<CL_SITE>>>)<~> <~>EQS<~> <~>AZ<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","CSR for AZ"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Copy:Y@EXEDIR@\SPFCopy.bat <~>RESULT_*.csv<~> <~>\\atdfile2.ch.intel.com\sh_shares\icatch\csr\<~> <~>N<~>"
+"UTILITIESDESC:","dump to CSR folder"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>VAR(<<<CL_SITE>>>)<~> <~>EQS<~> <~>CD<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","CSR for CD"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Copy:Y@EXEDIR@\SPFCopy.bat <~>RESULT_*.csv<~> <~>\\t7filer04.cd.intel.com\sh_shares\icatch\csr\<~> <~>N<~>"
+"UTILITIESDESC:","dump to CSR folder"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>VAR(<<<CL_SITE>>>)<~> <~>EQS<~> <~>CR<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","CSR for CR"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Copy:Y@EXEDIR@\SPFCopy.bat <~>RESULT_*.csv<~> <~>\\crfile1.cr.intel.com\sh_shares\icatch\csr\<~> <~>N<~>"
+"UTILITIESDESC:","dump to CSR folder"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>VAR(<<<CL_SITE>>>)<~> <~>EQS<~> <~>KM<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","CSR for KM"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Copy:Y@EXEDIR@\SPFCopy.bat <~>RESULT_*.csv<~> <~>\\kmfile6.kssm.intel.com\sh_shares\icatch\csr\<~> <~>N<~>"
+"UTILITIESDESC:","dump to CSR folder"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>VAR(<<<CL_SITE>>>)<~> <~>EQS<~> <~>PG<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","CSR for PG"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Copy:Y@EXEDIR@\SPFCopy.bat <~>RESULT_*MICJ_*.csv<~> <~>\\t3file1.png.intel.com\sh_shares\icatch\csr\<~> <~>N<~>"
+"UTILITIESDESC:","dump to CSR folder"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>VAR(<<<CL_SITE>>>)<~> <~>EQS<~> <~>VN<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","CSR for VN"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Copy:Y@EXEDIR@\SPFCopy.bat <~>RESULT_*MICJ_*.csv<~> <~>\\ssfile2.ss.intel.com\sh_shares\icatch\csr\<~> <~>N<~>"
+"UTILITIESDESC:","dump to CSR folder"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Else:Y{ELSE}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->RoboCopy:Y@EXEDIR@\RoboCopy.va <~>RESULT_*MICJ_*.csv<~> <~>.<~> <~>\\<<<CL_CONFIG>>>ATSHFS.intel.com\<<<CL_CONFIG>>>ATAnalysis$\MAOATM\Config\VF_POR_Cfg\ICM_PCS\ICMPCS_MICJ_CSR_LM\<<<CL_SITE>>>\HIST<~> <~>3<~> <~>10<~> <~>N<~> <~><~> <~>N<~>"
+"UTILITIESDESC:","archive CSRRecords.csv and force folder-creation if missing"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"a0.lot","LOT","Y","None","None","Row","c","","csv","SQL->a0.[lot]","col21"
+"f(x)->'Y'","HOLD_LOT","Y","None","None","Row","C","***","","SQL->'Y'","col9"
+"f(x)->'<<<dEmail>>>'","EMAIL","Y","None","None","Row","C","***","","SQL->'<<<dEmail>>>'","col10"
+"f(x)->'<<<dCCB>>>'","CCB_NUMBER","Y","None","None","Row","C","***","","SQL->'<<<dCCB>>>'","col11"
+"f(x)->'<<<dHNote>>>'","HOLD_NOTE","Y","None","None","Row","C","***","","SQL->'<<<dHNote>>>'","col12"
+"f(x)->'<<<dHCat>>>'","HOLDCATEGORY","Y","None","None","Row","C","***","","SQL->'<<<dHCat>>>'","col13"
+"f(x)->'<<<dFIFO>>>'","FIFO","Y","None","None","Row","C","***","","SQL->'<<<dFIFO>>>'","col14"
+"JOINGRID:"
+"FILTERGRID:"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/END_EMBED
+/EMBED=VG2;AQC Release
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","No"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","No"
+"TERMINAL:","No"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:",""
+"EXCEL:","AQCrelease.csv"
+"ROW:","No"
+"EMBED:","Y"
+"INCNESTUTIL:","N"
+"QUERYROWS:","9"
+"JOINROWS:","2"
+"FILTERROWS:","3"
+"COL_ID_COUNTER:","14"
+"CHART_COUNTER:","4"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","-1"
+"<---- New Query ---->","1:5:SQL"
+"TABLEGRID:","2"
+"","AQCCSRrecords.csv a0",""
+"","CAcompleted.csv a1",""
+"MARSNODE:","<<<dMARS>>>"
+"ARIESNODE:","Default"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","@[]@"
+"DATABASETYPE:","SQLite"
+"SINGLENODE:","TEXT (SQLite)"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Fetching Text (SQLite) Data"
+"DISTINCT:","Yes"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"PREPROCESS_CSV:","No"
+"NOHDRS:","No"
+"CARTESIAN:","No"
+"<---- New Query ---->","2:0:a2"
+"TABLEGRID:","1"
+"","F_Lot_Status_22",""
+"MARSNODE:","<<<dMARS>>>"
+"ARIESNODE:","Default"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","@[]@"
+"DATABASETYPE:","Oracle"
+"SINGLENODE:","<<<dMARS>>>"
+"SINGLESCHEMA:","@[]@"
+"PROMPT-TEXT:","Fetching MARS Data"
+"DISTINCT:","Yes"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"FIRST_ROWS:","No"
+"ORDERED:","No"
+"OTHER-HINT:","No"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rows-In-File:Y{ROWS-IN-FILE} <~>AQCrelease.csv<~> <~>RELEASE<~> <~>N<~>"
+"UTILITIESDESC:","check if got lot(s) can be released"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>RELEASE<~> <~>GT<~> <~>0<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if got lot(s) can be released"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Value-In-File:Y{VALUE-IN-FILE} <~>configsets.csv<~> <~>RFC<~> <~>DRFC<~>"
+"UTILITIESDESC:","check if RFC is enabled"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>RFC<~> <~>NES<~> <~>EMPTY<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if RFC is enabled"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->HTML-Report:YNN12691"
+"UTILITIESDESC:","sending email with RFC"
+"HTML-BEGIN",""
+"HTML-SCRIPT"
+"HTML-REPORT:MYREPORT1</@#;>MyReport1</@#;>"
+"
+
+
+
+
+
+
+
+
+
+Type<\\>Key<\\>COL1<\\>COL2<\\>COL3<\\>COL4<\\>COL5<\\>COL6<\\>COL7<\\>COL8<\\>COL9<\\>COL10<\\>COL11<\\>COL12"
+"TYPE<\\>HTML<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"INPUT-FILE<\\>AQCrelease.csv<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"OUTPUT-FILE<\\>SQLPathFinder.htm<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"CSS<\\>sqlpathfinder_style_1.css<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"COLSPAN<\\>@<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DRILLDOWN<\\>N<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DYNAMICSORT<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DYNAMICFILTER<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"ATTOPDRILLDOWN<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"NOPREPROCESS<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"COLUMN-DATA<\\><\\>lot<\\>operation<\\>hold_category<\\>hold_name<\\>hold_note<\\><\\><\\><\\><\\><\\><\\>"
+"COLUMN-HEADERS<\\><\\>Lot<\\>Operation<\\>Hold@Cat<\\>Hold@Name<\\>Hold@Note<\\><\\><\\><\\><\\><\\><\\>"
+"COLUMN-ALIGNMENT<\\><\\>middle-left<\\>middle-left<\\>middle-left<\\>middle-left<\\>middle-left<\\><\\><\\><\\><\\><\\><\\>"
+"COLUMN-FORMAT<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"HTML-REPORT-SPEC-END"
+"HTML-CREATE WINDOW:WIN2</@#;>0@@@EMAIL:<<<dEmail>>>@@@sqlpathfinder_style_1.css@@@E->Y@@@RR->NO@@@B->Y@@@EM-A->@@@EM-S->@@@SEC->Y@@@Text:1:white<:>black<:>N<:>N<:>N<:>intel clear<:>11<:>Left<:>The following lots were previously 'on hold' due to its ADVI Image Analytic CA report not found. Based on recent compilation, the CA reports have been found now. Please 'release' the lots in HDR. These lots are safe to ship now.|MYREPORT1:1|Images:1:RFC.PNG+1|Text:1:white<:>black<:>N<:>N<:>N<:>intel clear<:>11<:>Left<:><b>Current configurations for Last-Gate Screening:</b><br>1. Last-Gate Screening Enabled?: <span style=<~>color:blue<~>><<<dLastGate>>></span><br>2. Time scope: <span style=<~>color:blue<~>>Last <<<dTrange>>> day(s)</span> (self-corrected to 1 if set to <= 0)<br>3. ADVI operation(s): <span style=<~>color:blue<~>><<<dOper>>></span><br>4. Last-gate operation(s): <span style=<~>color:blue<~>><<<dGate>>></span><br>5. Product(s) excluded: <span style=<~>color:blue<~>><<<dProdExc>>></span><br>6. Tool(s) excluded: <span style=<~>color:blue<~>><<<dToolExc>>></span>|JMP-HTML:1:revision_ia.htm@@@</@#;>Win2</@#;><<<dRSubject>>>"
+"HTML-END"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Else:Y{ELSE}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->HTML-Report:YYN12588"
+"UTILITIESDESC:","sending email w/o RFC"
+"HTML-BEGIN",""
+"HTML-SCRIPT"
+"HTML-REPORT:MYREPORT1_3</@#;>MyReport1</@#;>"
+"
+
+
+
+
+
+
+
+
+
+Type<\\>Key<\\>COL1<\\>COL2<\\>COL3<\\>COL4<\\>COL5<\\>COL6<\\>COL7<\\>COL8<\\>COL9<\\>COL10<\\>COL11<\\>COL12"
+"TYPE<\\>HTML<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"INPUT-FILE<\\>AQCrelease.csv<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"OUTPUT-FILE<\\>SQLPathFinder.htm<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"CSS<\\>sqlpathfinder_style_1.css<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"COLSPAN<\\>@<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DRILLDOWN<\\>N<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DYNAMICSORT<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DYNAMICFILTER<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"ATTOPDRILLDOWN<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"NOPREPROCESS<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"COLUMN-DATA<\\><\\>lot<\\>operation<\\>hold_category<\\>hold_name<\\>hold_note<\\><\\><\\><\\><\\><\\><\\>"
+"COLUMN-HEADERS<\\><\\>Lot<\\>Operation<\\>Hold@Cat<\\>Hold@Name<\\>Hold@Note<\\><\\><\\><\\><\\><\\><\\>"
+"COLUMN-ALIGNMENT<\\><\\>middle-left<\\>middle-left<\\>middle-left<\\>middle-left<\\>middle-left<\\><\\><\\><\\><\\><\\><\\>"
+"COLUMN-FORMAT<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"HTML-REPORT-SPEC-END"
+"HTML-CREATE WINDOW:WIN2</@#;>0@@@EMAIL:<<<dEmail>>>@@@sqlpathfinder_style_1.css@@@E->Y@@@RR->NO@@@B->Y@@@EM-A->@@@EM-S->@@@SEC->Y@@@Text:1:white<:>black<:>N<:>N<:>N<:>intel clear<:>11<:>Left<:>The following lots were previously 'on hold' due to its ADVI Image Analytic CA report not found. Based on recent compilation, the CA reports have been found now. Please 'release' the lots in HDR. These lots are safe to ship now.|MYREPORT1_3:1|Text:1:white<:>black<:>N<:>N<:>N<:>intel clear<:>11<:>Left<:><b>Current configurations for Last-Gate Screening:</b><br>1. Last-Gate Screening Enabled?: <span style=<~>color:blue<~>><<<dLastGate>>></span><br>2. Time scope: <span style=<~>color:blue<~>>Last <<<dTrange>>> day(s)</span> (self-corrected to 1 if set to <= 0)<br>3. ADVI operation(s): <span style=<~>color:blue<~>><<<dOper>>></span><br>4. Last-gate operation(s): <span style=<~>color:blue<~>><<<dGate>>></span><br>5. Product(s) excluded: <span style=<~>color:blue<~>><<<dProdExc>>></span><br>6. Tool(s) excluded: <span style=<~>color:blue<~>><<<dToolExc>>></span>|JMP-HTML:1:revision_ia.htm@@@</@#;>Win2</@#;><<<dRSubject>>>"
+"HTML-END"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"a0.lot","lot","Y","None","None","Row","c","","csv","SQL->a0.[lot]","col1"
+"a1.filename","filename","P","None","None","Row","c","","csv","SQL->a1.[filename]","col13"
+"f(x)->UPPER(SUBSTR(  {filename} ,1, CharIndex_v2('.C', UPPER({filename}) ,1,1) -1))","lot_ca","Y","None","None","Row","C","***","csv","SQL->UPPER(SUBSTR(  {col13} ,1, CharIndex_v2('.C', UPPER({col13}) ,1,1) -1))","col14"
+"f(x)->CASE WHEN UPPER({lot}) = UPPER({lot_ca}) THEN 1 ELSE 0 END","release","P","None","None","Row","N","***","@if@1","SQL->CASE WHEN UPPER({col1}) = UPPER({col14}) THEN 1 ELSE 0 END","col4"
+"a2.lot","lot_1","P","None","None","Row","c","Identifies a batch of wafers or units being processed in the factory. The basic format of the Lot number is:  FYWWNNNN where F=fab code, Y=year, WW=workweek, NNNN= sequence, with the 9th or 10th characters as alphanumeric. In Fab, Etest and Sort, a quantity that has a wafer as an unit of measure and the physical form that passes through the factory. A lot starting the Fab process contains up to 25 wafers and can be split into child lots of varying sizes, and wafer losses can also occur. New lots are also created to split lots due to varying characteristics, such as speed or rework, for a portion of the lot. In some 200mm fabs production lots, the lot number uses a silicon vendor ID in the 8th character","f_lot","a2->f0.lot","col5"
+"a2.operation","operation","Y","None","None","Row","c","The current operation (or processing step) the lot is at","f_lot","a2->f0.operation","col6"
+"a2.hold_category","hold_category","Y","None","None","Row","c","Identifies the hold reason code associated with the lot when it was put on hold. E.g., C4, Litho, SPC++","f_lot","a2->f0.hold_category","col9"
+"a2.hold_name","hold_name","Y","None","None","Row","x","Hold Name","f_lot","a2->f0.hold_name","col10"
+"a2.hold_note","hold_note","Y","None","None","Row","x","Note added when lot put on hold. Not used in MES300 as a lot comment annotation is used instead.","f_lot","a2->f0.hold_note","col11"
+"JOINGRID:"
+"AND","","Sqlite->a0.lot                                                                                                    : SQL->{col1}","=","Sqlite->f(x)->lot_ca                                                                                                    : SQL->{col14}",""
+"AND","","Sqlite->a0.lot                                                                                                    : SQL->{col1}","=","View->a2.lot                                                                                                    : a2->{col5}",""
+"FILTERGRID:"
+"AND NOT","","a0.lot","In","'DUMMY'","","","c","csv","SQL->a0.[lot]",""
+"AND","","f(x)->{release}","=","1","","","nx","@IF@2","SQL->{col4}",""
+"AND","","a2.lot","In Temp","{Sqlite (all)} : Sqlite->a0.lot","",".","c","f_lot","a2->f0.lot","SQL->{col1}"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/END_EMBED
+/EMBED=VG2;Updating AQCCSR Records
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","Yes"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","No"
+"TERMINAL:","No"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:",""
+"EXCEL:","AQCCSRrecordstmp.csv"
+"ROW:","No"
+"EMBED:","Y"
+"INCNESTUTIL:","N"
+"QUERYROWS:","1"
+"JOINROWS:","0"
+"FILTERROWS:","3"
+"COL_ID_COUNTER:","1"
+"CHART_COUNTER:","0"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","-1"
+"<---- New Query ---->","1:5:SQL"
+"TABLEGRID:","1"
+"","AQCCSRrecords.csv a0",""
+"MARSNODE:","Default"
+"ARIESNODE:","Default"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","Default"
+"DATABASETYPE:","SQLite"
+"SINGLENODE:","TEXT (SQLite)"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Fetching Text (SQLite) Data"
+"DISTINCT:","No"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"PREPROCESS_CSV:","No"
+"NOHDRS:","No"
+"CARTESIAN:","No"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Delete:Y@EXEDIR@\SPFDelete.bat <~>AQCCSRrecords.csv<~> <~>N<~>"
+"UTILITIESDESC:","delete AQCCSRrecords.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rename:Y@EXEDIR@\SPFRename.va <~>AQCCSRrecordstmp.csv<~> <~>AQCCSRrecords.csv<~>"
+"UTILITIESDESC:","rename AQCCSRrecordstmp.csv to AQCCSRrecords.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Copy:Y@EXEDIR@\SPFCopy.bat <~>AQCCSRrecords.csv<~> <~>\\<<<dHIST>>>\<~> <~>Y<~>"
+"UTILITIESDESC:","archive AQCCSRrecords.csv"
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"a0.*","","Y","None","None","Row","","Display all columns in table. I.E., SELECT * FROM <table>","","SQL->a0.*","col1"
+"JOINGRID:"
+"FILTERGRID:"
+"AND NOT","","a0.lot","In Group",".\AQCrelease.csv:1. LOT","","","c","csv","SQL->a0.[lot]",""
+"AND NOT","","a0.lot","Is Null","","","","c","csv","SQL->a0.[lot]",""
+"AND NOT","","a0.lot","=","'DUMMY'","","","c","csv","SQL->a0.[lot]",""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/END_EMBED
+/EMBED=VG2;Config File Preparation
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","Yes"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","Yes"
+"TERMINAL:","No"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:","PrepConfig.exe"
+"EXCEL:","configsets.csv"
+"ROW:","No"
+"EMBED:","Y"
+"JOINDUCKDB:","N"
+"INCNESTUTIL:","N"
+"QUERYROWS:","30"
+"JOINROWS:","0"
+"FILTERROWS:","1"
+"COL_ID_COUNTER:","36"
+"CHART_COUNTER:","4"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","2"
+"CL_SITE","KM</@#;><<<CL_SITE>>>"
+"STUCK","5</@#;><<<STUCK>>>"
+"LIMIT","0.25</@#;><<<LIMIT>>>"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->HTML-Report:YYN3450"
+"UTILITIESDESC:","create revision footer"
+"HTML-BEGIN",""
+"HTML-SCRIPT"
+"HTML-REPCSS:MYCSS4</@#;>MyCSS4</@#;>"
+"
+"
+"Type<\\>Key<\\>COL1<\\>COL2<\\>COL3<\\>COL4<\\>COL5<\\>COL6<\\>COL7<\\>COL8"
+"TYPE<\\>CSS<\\><\\><\\><\\><\\><\\><\\><\\>"
+"CSS<\\>sqlpathfinder_style_1.css<\\><\\><\\><\\><\\><\\><\\><\\>"
+"FORMAT<\\>Column-Headers<\\>background-color:#dbd9c0<\\>color:#444<\\>font-family:Arial<\\>font-size:12<\\>font-style:normal<\\>font-weight:bold<\\>text-align:left<\\>text-decoration:normal<\\>vertical-align:middle"
+"FORMAT<\\>Column-Data<\\>background-color:white<\\>color:#444<\\>font-family:Arial<\\>font-size:12<\\>font-style:normal<\\>text-align:left<\\>vertical-align:middle<\\>"
+"FORMAT<\\>Column-Alt-Row<\\>background-color:#f7f5dc<\\>color:#333<\\>font-family:Arial<\\>font-size:12<\\>font-style:normal<\\>text-align:left<\\>vertical-align:middle<\\>"
+"FORMAT<\\>At-Top-of-Report<\\>background-color:white<\\>color:#444<\\>font-family:Arial<\\>font-size:15<\\>font-style:normal<\\>font-weight:bold<\\>text-align:center<\\>vertical-align:middle"
+"FORMAT<\\>At-Top-of-Col1<\\>background-color:white<\\>color:#444<\\>font-family:Arial<\\>font-size:12<\\>font-style:normal<\\>font-weight:bold<\\>text-align:left<\\>vertical-align:middle"
+"FORMAT<\\>At-Top-of-Col2<\\>background-color:white<\\>color:#444<\\>font-family:Arial<\\>font-size:12<\\>font-style:normal<\\>font-weight:bold<\\>text-align:left<\\>vertical-align:middle"
+"FORMAT<\\>At-Top-of-Col3<\\>background-color:white<\\>color:#444<\\>font-family:Arial<\\>font-size:12<\\>font-style:normal<\\>font-weight:bold<\\>text-align:left<\\>vertical-align:middle"
+"FORMAT<\\>JQX-All-IChart-Text<\\>background-color:white<\\>color:black<\\>font-family:Verdana<\\>font-size:11<\\>font-style:normal<\\>font-weight:normal<\\>text-align:left<\\>vertical-align:middle"
+"FORMAT<\\>COLUMN-BORDER<\\>border-color:#cc9<\\>border-collapse:collapse<\\>border-style:solid<\\>border-width:1px<\\>border-spacing:4px<\\><\\><\\>"
+"HTML-REPORT-SPEC-END"
+"HTML-CREATE WINDOW:WIN3</@#;>0@@@revision.htm@@@sqlpathfinder_style_1.css@@@E->Y@@@RR->NO@@@B->Y@@@EM-A->@@@EM-S->@@@SEC->Y@@@Text:1:white<:>silver<:>N<:>Y<:>N<:>arial<:>8<:>Left<:><script filename><br>- <changes made>@@@</@#;>Win3</@#;>revision"
+"HTML-END"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:Ymacrotmp.csv<SOF><{><}>Sfolder,underDEV,useCSR,useMMS<{><}>ICMPCS_GE_Signal_CSR_CAM,N,Y,Y"
+"UTILITIESDESC:","create macro.tmp, update script name here"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File2:NTT<SOF><{><}>Do not edit beyond this utility unless you fully understand all the Do's and Don'ts<{><}><{><}>----------------------- divider -----------------------"
+"UTILITIESDESC:","do not edit below this"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:Ygetcsrsu.bat<SOF><{><}>@echo off<{><}>set PriCSR=<~>\\AZATSHFS.intel.com\AZATAnalysis$\MAOATM\Config\VF_POR_Cfg\ICM_PCS\Patrol\*.___<~><{><}>set SecCSR=<~>\\KMATSHFS.intel.com\KMATAnalysis$\MAOATM\Config\VF_POR_Cfg\ICM_PCS\Patrol\*.___<~><{><}>set BakCSR=<~>\\SHUser-ProdAT.intel.com\SHProdATUser$\%username%\Patrol\*.___<~><{><}>copy %PriCSR% . || copy %SecCSR% . || copy %BAKCSR% .<{><}>ren setsiteparam.___ setsiteparam.exe"
+"UTILITIESDESC:","create getcsrsu.bat"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->DOS:Ygetcsrsu.bat"
+"UTILITIESDESC:","run getcsrsu.bat"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Start-Macro:Y{START-MACRO} <~>macrotmp.csv<~> <~>N<~>"
+"UTILITIESDESC:","Start Macro Processing"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->DOS:Ysetsiteparam.exe <<<CL_SITE>>> <<<SFOLDER>>> <<<UNDERDEV>>> <<<USECSR>>> <<<USEMMS>>>"
+"UTILITIESDESC:","run setsiteparam.exe"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File2:YTT<SOF><{><}>SST Rev3g"
+"UTILITIESDESC:","SST version"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-Macro:Y{END-MACRO}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Delete:Y@EXEDIR@\SPFDelete.bat <~>macrotmp.csv,getcsrsu.bat,setsiteparam.exe,csrsu.txt<~> <~>N<~>"
+"UTILITIESDESC:","delete temporary files"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Start-Macro:Y{START-MACRO} <~>ctime.csv<~> <~>N<~>"
+"UTILITIESDESC:","pass server time info and CSR path to config file"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rows-In-File:Y{ROWS-IN-FILE} <~>ICMPCS_config.csv<~> <~>CONFIG<~> <~>N<~>"
+"UTILITIESDESC:","Check existence of config file"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>CONFIG<~> <~>LE<~> <~>0<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if config file not found"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Email:N@EXEDIR@\SQLPathFinder_Email.va <~><~> <~>self<~> <~>Critical: ICMPCS config file not found - Path: \\AZATSHFS.intel.com\AZATAnalysis$\MAOATM\Config\VF_POR_Cfg\ICM_PCS\<<<SFOLDER>>>\<<<CL_SITE>>>\Config<~> <~><~> <~>alex.chin.hooi.lee@intel.com<~> <~><~> <~><~> <~>N<~> <~><<<spf-email-type>>><~>"
+"UTILITIESDESC:","Trigger if config file not found"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Else:Y{ELSE}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","1:5:SQL"
+"TABLEGRID:","1"
+"","ICMPCS_config.csv a0",""
+"MARSNODE:","Default"
+"ARIESNODE:","Default"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","Default"
+"DATABASETYPE:","SQLite"
+"SINGLENODE:","TEXT (SQLite)"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Transpose config file to macro-friendly format"
+"DISTINCT:","Yes"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"PREPROCESS_CSV:","No"
+"NOHDRS:","No"
+"CARTESIAN:","No"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rows-In-File:Y{ROWS-IN-FILE} <~>configsets.csv<~> <~>CONFIGSETS<~> <~>N<~>"
+"UTILITIESDESC:","Check config file conversion output"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>CONFIGSETS<~> <~>NE<~> <~>1<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if config file converted output >1 row"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Email:N@EXEDIR@\SQLPathFinder_Email.va <~>ICMPCS_config.csv,configsets.csv<~> <~>self<~> <~>Alert: Pls check ICMPCS (<<<SFOLDER>>>) config file as it contains not equal to 1 row<~> <~><~> <~>alex.chin.hooi.lee@intel.com<~> <~><~> <~><~> <~>N<~> <~><<<spf-email-type>>><~>"
+"UTILITIESDESC:","Trigger if converted config file contains not equal to 1 row"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Else:Y{ELSE}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Start-Macro:Y{START-MACRO} <~>configsets.csv<~> <~>N<~>"
+"UTILITIESDESC:","Start Macro Processing"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>VAR(<<<CSRV>>>)<~> <~>EQS<~> <~>FAIL<~> <~>AND<~> <~>VAR(<<<UNDERDEV>>>)<~> <~>EQS<~> <~>N<~>"
+"UTILITIESDESC:","Validate CSR accessibility"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:YCSRVerror.htm<SOF><{><}><!DOCTYPE html><{><}><html><{><}><body><{><}><p>It is detected that you cannot access to CSR depository path for <strong><<<CL_SITE>>></strong> site.</p><{><}><{><}><p>This could be due to you do NOT have the <strong>CSR Superuser</strong> access.</p><{><}><{><}><p>Script Name: <strong><<<SFOLDER>>></strong><{><}>Path: <<<CSRPATH>>></p><{><}></body><{><}></html>"
+"UTILITIESDESC:","create email content CSRVerror.htm"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Email:N@EXEDIR@\SQLPathFinder_Email.va <~><~> <~>self<~> <~>Critical: Cannot access to <<<CSRPATH>>><~> <~>CSRVerror.htm<~> <~>alex.chin.hooi.lee@intel.com<~> <~><~> <~><~> <~>N<~> <~><<<spf-email-type>>><~>"
+"UTILITIESDESC:","email when user have no access to CSR"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>VAR(<<<MMSV>>>)<~> <~>EQS<~> <~>FAIL<~> <~>AND<~> <~>VAR(<<<UNDERDEV>>>)<~> <~>EQS<~> <~>N<~>"
+"UTILITIESDESC:","Validate MMS accessibility"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:YMMSVerror.htm<SOF><{><}><!DOCTYPE html><{><}><html<{><}><body><{><}><p>It is detected that you cannot access to MMS Signal Tracer depository path for <strong><<<CL_SITE>>></strong> site.</p><{><}><{><}><p>This could be due to you do NOT have the <strong>MMS Signal Tracer Admin</strong> access.</p><{><}><{><}><p>Script Name: <strong><<<SFOLDER>>></strong><br/><{><}>Path: <<<MMSPATH>>></p><{><}></body><{><}></html>"
+"UTILITIESDESC:","create email content MMSVerror.htm"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Email:N@EXEDIR@\SQLPathFinder_Email.va <~><~> <~>self<~> <~>Critical: Cannot access to <<<MMSPATH>>><~> <~>MMSVerror.htm<~> <~>alex.chin.hooi.lee@intel.com<~> <~><~> <~><~> <~>N<~> <~><<<spf-email-type>>><~>"
+"UTILITIESDESC:","email when user have no access to MMS Signal Tracer"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->RoboCopy:Y@EXEDIR@\RoboCopy.va <~>HIST.txt<~> <~>\\AZATSHFS.intel.com\AZATAnalysis$\MAOATM\Config\VF_POR_Cfg\ICM_PCS\<<<SFOLDER>>>\<<<CL_SITE>>>\HIST<~> <~>.<~> <~>5<~> <~>30<~> <~>N<~> <~><~> <~>N<~>"
+"UTILITIESDESC:","robocopy HIST.txt"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rows-In-File:Y{ROWS-IN-FILE} <~>HIST.txt<~> <~>HIST<~> <~>N<~>"
+"UTILITIESDESC:","check presence of HIST.txt"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>HIST<~> <~>LE<~> <~>0<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if HIST.txt is not found"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:YHIST.csv<SOF><{><}>LOT,OUT_DATE<{><}>DUMMY,2000-01-01 00:00:00"
+"UTILITIESDESC:","create dummy HIST.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:YHISTERROR.txt<SOF><{><}>ERROR<{><}>ERROR<{><}>ERROR"
+"UTILITIESDESC:","create HISTERROR.txt"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Else:Y{ELSE}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rename:Y@EXEDIR@\SPFRename.va <~>HIST.txt<~> <~>HIST.csv<~>"
+"UTILITIESDESC:","convert HIST.txt to HIST.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-Macro:Y{END-MACRO}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-Macro:Y{END-MACRO}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"a0.icmpcs","icmpcs","Y","None","None","Row","c","","csv","SQL->a0.[icmpcs]","col14"
+"a0.parameter","parameter","Y","None","None","Header","c","","csv","SQL->a0.[parameter]","col2"
+"a0.value","value","Y","None","Max","Value","c","","csv","SQL->a0.[value]","col3"
+"f(x)->'<<<STARTTS>>>'","STARTTS","Y","None","None","Row","H","***","","SQL->'<<<STARTTS>>>'","col22"
+"f(x)->'<<<UTC>>>'","UTC","Y","None","None","Row","C","***","","SQL->'<<<UTC>>>'","col23"
+"f(x)->'<<<TZONE>>>'","TZONE","Y","None","None","Row","C","***","","SQL->'<<<TZONE>>>'","col32"
+"f(x)->'<<<TZS>>>'","TZS","Y","None","None","Row","C","***","","SQL->'<<<TZS>>>'","col35"
+"f(x)->'<<<SFOLDER>>>'","SFOLDER","Y","None","None","Row","C","***","","SQL->'<<<SFOLDER>>>'","col12"
+"f(x)->'<<<FAC>>>'","FAC","Y","None","None","Row","C","***","","SQL->'<<<FAC>>>'","col21"
+"f(x)->'<<<MARS>>>'","MARS","Y","None","None","Row","C","***","","SQL->'<<<MARS>>>'","col8"
+"f(x)->'<<<MARSN>>>'","MARSN","Y","None","None","Row","C","***","","SQL->'<<<MARSN>>>'","col33"
+"f(x)->'<<<RIMS>>>'","RIMS","Y","None","None","Row","C","***","","SQL->'<<<RIMS>>>'","col17"
+"f(x)->'<<<EIMS>>>'","EIMS","Y","None","None","Row","C","***","","SQL->'<<<EIMS>>>'","col18"
+"f(x)->'<<<ARIES>>>'","ARIES","Y","None","None","Row","C","***","","SQL->'<<<ARIES>>>'","col10"
+"f(x)->'<<<OASYS>>>'","OASYS","Y","None","None","Row","C","***","","SQL->'<<<OASYS>>>'","col19"
+"f(x)->'<<<MONGO>>>'","MONGO","Y","None","None","Row","C","***","","SQL->'<<<MONGO>>>'","col29"
+"f(x)->'<<<MMS>>>'","MMS","Y","None","None","Row","C","***","","SQL->'<<<MMS>>>'","col27"
+"f(x)->'<<<MMSI>>>'","MMSI","Y","None","None","Row","C","***","","SQL->'<<<MMSI>>>'","col28"
+"f(x)->'<<<TOOLLOG>>>'","TOOLLOG","Y","None","None","Row","C","***","","SQL->'<<<TOOLLOG>>>'","col24"
+"f(x)->'<<<VFMARS>>>'","VFMARS","Y","None","None","Row","C","***","","SQL->'<<<VFMARS>>>'","col25"
+"f(x)->'<<<VFARIES>>>'","VFARIES","Y","None","None","Row","C","***","","SQL->'<<<VFARIES>>>'","col26"
+"f(x)->'<<<VFMONGO>>>'","VFMONGO","Y","None","None","Row","C","***","","SQL->'<<<VFMONGO>>>'","col31"
+"f(x)->'<<<CSRPATH>>>'","CSRPATH","Y","None","None","Row","C","***","","SQL->'<<<CSRPATH>>>'","col7"
+"f(x)->'<<<MMSPATH>>>'","MMSPATH","Y","None","None","Row","C","***","","SQL->'<<<MMSPATH>>>'","col11"
+"f(x)->'<<<MIPPATH>>>'","MIPPATH","Y","None","None","Row","C","***","","SQL->'<<<MIPPATH>>>'","col30"
+"f(x)->'<<<LURL>>>'","LURL","Y","None","None","Row","C","***","","SQL->'<<<LURL>>>'","col34"
+"f(x)->'<<<IREPOP>>>'","IREPOP","Y","None","None","Row","C","***","","SQL->'<<<IREPOP>>>'","col36"
+"f(x)->'<<<UNDERDEV>>>'","UNDERDEV","Y","None","None","Row","C","***","","SQL->'<<<UNDERDEV>>>'","col20"
+"f(x)->'<<<CSRV>>>'","CSRV","Y","None","None","Row","C","***","","SQL->'<<<CSRV>>>'","col15"
+"f(x)->'<<<MMSV>>>'","MMSV","Y","None","None","Row","C","***","","SQL->'<<<MMSV>>>'","col16"
+"JOINGRID:"
+"FILTERGRID:"
+"AND","","a0.icmpcs","=","'ICMPCS'","","","c","csv","SQL->a0.[icmpcs]",""
+
+
+
+
+
+
+
+
+
+/END_EMBED
+/EMBED=VG2;Last-Gate Screening
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","Yes"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","No"
+"TERMINAL:","No"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:",""
+"EXCEL:","RESULT_MICJAQC_.csv"
+"ROW:","No"
+"EMBED:","Y"
+"INCNESTUTIL:","N"
+"QUERYROWS:","24"
+"JOINROWS:","2"
+"FILTERROWS:","15"
+"COL_ID_COUNTER:","71"
+"CHART_COUNTER:","5"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","-1"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:Nforaqc.bat<SOF><{><}>@echo off<{><}>setlocal EnableDelayedExpansion<{><}><{><}>net use * \\<<<dFiler>>>\Image_ATM\ADVI\ADVICA /p:no > MICJ_nw.txt 2>&1<{><}>for /f <~>tokens=2 delims= <~> %%A in ('findstr /l Drive MICJ_nw.txt') do set source=%%A<{><}>set tfolder=CAOutput\csv_header<{><}><{><}>echo filename>CAcompleted.csv<{><}><{><}>for /f <~>delims=<~> %%A in ('dir /b /od !source!') do (<{><}>	if exist !source!\%%A\!tfolder! dir /b /o-d !source!\%%A\!tfolder!\*.csv>>CAcompleted.csv<{><}>)<{><}><{><}>endlocal<{><}>net use !source! /delete<{><}>exit"
+"UTILITIESDESC:","Create foraqc.bat"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:Yforaqc.bat<SOF><{><}>@echo off<{><}>setlocal EnableDelayedExpansion<{><}><{><}>net use * \\<<<dFiler>>>\Image_ATM\ADVI\ADVICA /p:no > MICJ_nw.txt 2>&1<{><}>for /f <~>tokens=2 delims= <~> %%A in ('findstr /l Drive MICJ_nw.txt') do set source=%%A<{><}>set tfile=CAOutput\CAPerformanceTracking.csv<{><}><{><}>REM echo Filename,OutDate,StartTime,EndTime,CNNSize,CARawSize,ImportTime,Status,Dispatching,Clustering,Joining,CAStarting,CAEnding,CAProcessingTime,Trigger>CAcompleted.csv<{><}>if exist CAcompleted.csv del /q CAcompleted.csv<{><}><{><}>for /f <~>delims=<~> %%A in ('dir /b /od !source!') do (<{><}>	if exist !source!\%%A\!tfile! type !source!\%%A\!tfile!>>CAcompleted.csv<{><}>)<{><}><{><}>endlocal<{><}>net use !source! /delete<{><}>exit"
+"UTILITIESDESC:","Create foraqc.bat"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->DOS:Yforaqc.bat"
+"UTILITIESDESC:","Run foraqc.bat"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Wait-File:Y@EXEDIR@\WaitFile.va <~>CAcompleted.csv<~> <~>3<~>"
+"UTILITIESDESC:","Wait for a file to appear or a period of time to elapse"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Copy:Y@EXEDIR@\SPFCopy.bat <~>\\<<<dHIST>>>\AQCCSRrecords.csv<~> <~>.\<~> <~>Y<~>"
+"UTILITIESDESC:","Copy Files/Folders"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rows-In-File:Y{ROWS-IN-FILE} <~>AQCCSRrecords.csv<~> <~>AQCrecord<~> <~>N<~>"
+"UTILITIESDESC:","Count Rows in a File"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>AQCrecord<~> <~>LT<~> <~>0<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","Apply Conditional Logic"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:YAQCCSRrecords.csv<SOF><{><}>LOT<{><}>DUMMY"
+"UTILITIESDESC:","Create AQCCSR history file"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","2:0:a0"
+"TABLEGRID:","1"
+"","F_Lot_History_v3",""
+"MARSNODE:","<<<dMARS>>>"
+"ARIESNODE:","Default"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","@[]@"
+"DATABASETYPE:","Oracle"
+"SINGLENODE:","<<<dMARS>>>"
+"SINGLESCHEMA:","@[]@"
+"PROMPT-TEXT:","Fetching MARS Data"
+"DISTINCT:","Yes"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"FIRST_ROWS:","No"
+"ORDERED:","No"
+"OTHER-HINT:","No"
+"<---- New Query ---->","2:0:a1"
+"TABLEGRID:","1"
+"","F_Lot_History_v3",""
+"MARSNODE:","<<<dMARS>>>"
+"ARIESNODE:","Default"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","@[]@"
+"DATABASETYPE:","Oracle"
+"SINGLENODE:","<<<dMARS>>>"
+"SINGLESCHEMA:","@[]@"
+"PROMPT-TEXT:","Fetching MARS Data"
+"DISTINCT:","Yes"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"FIRST_ROWS:","No"
+"ORDERED:","No"
+"OTHER-HINT:","No"
+"<---- New Query ---->","1:5:SQL"
+"TABLEGRID:","1"
+"","CAcompleted.csv a2",""
+"MARSNODE:","<<<dMARS>>>"
+"ARIESNODE:","Default"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","@[]@"
+"DATABASETYPE:","SQLite"
+"SINGLENODE:","TEXT (SQLite)"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Fetching Text (SQLite) Data"
+"DISTINCT:","No"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"PREPROCESS_CSV:","Yes"
+"NOHDRS:","No"
+"CARTESIAN:","No"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rows-In-File:Y{ROWS-IN-FILE} <~>RESULT_MICJAQC_.csv<~> <~>AQCCSR<~> <~>N<~>"
+"UTILITIESDESC:","check if found lot(s) not go through CA"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>AQCCSR<~> <~>GT<~> <~>0<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if got lot(s) not go through CA"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Smart-Append:Y@EXEDIR@\SmartAppend.va <~>AQCCSRrecords.csv<~> <~>RESULT_MICJAQC_.csv<~> <~>deo<~> <~>Today - 365 days<~> <~>lot<~> <~>N<~> <~>N<~> <~><~> <~>Version 3<~> <~><<<spf-hadoop-server>>><~> <~><~>"
+"UTILITIESDESC:","append date to AQCCSRrecords.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Value-In-File:Y{VALUE-IN-FILE} <~>configsets.csv<~> <~>RFC<~> <~>DRFC<~>"
+"UTILITIESDESC:","check if RFC is enabled"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>RFC<~> <~>NES<~> <~>EMPTY<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if RFC is enabled"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->HTML-Report:YYN31086"
+"UTILITIESDESC:","sending email when last-gate-checking detains lot(s) with RFC"
+"HTML-BEGIN",""
+"HTML-SCRIPT"
+"HTML-REPORT:MYREPORT2</@#;>AQC</@#;>"
+"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Type<\\>Key<\\>COL1<\\>COL2<\\>COL3<\\>COL4<\\>COL5<\\>COL6<\\>COL7<\\>COL8<\\>COL9<\\>COL10<\\>COL11<\\>COL12"
+"TYPE<\\>HTML<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"INPUT-FILE<\\>RESULT_MICJAQC_.csv<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"OUTPUT-FILE<\\>SQLPathFinder.htm<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"CSS<\\>sqlpathfinder_style_1.css<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"COLSPAN<\\>@<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DRILLDOWN<\\>N<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DYNAMICSORT<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DYNAMICFILTER<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"ATTOPDRILLDOWN<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"NOPREPROCESS<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"COLUMN-DATA<\\><\\>prod<\\>lot<\\>oper<\\>deo<\\>movein_date<\\>movedin<\\>onhold<\\>entity<\\><\\><\\><\\>"
+"COLUMN-HEADERS<\\><\\>Product<\\>Lot<\\>Oper<\\>Date@Enter Oper<\\>Date@MVIN<\\>Flag@MVIN<\\>Flag@Onhold<\\>Entity<\\><\\><\\><\\>"
+"COLUMN-ALIGNMENT<\\><\\>middle-center<\\>middle-left<\\>middle-center<\\>middle-left<\\>middle-left<\\>middle-center<\\>middle-center<\\>middle-center<\\><\\><\\><\\>"
+"COLUMN-FORMAT<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"HTML-REPORT-SPEC-END"
+"HTML-CREATE WINDOW:WIN3</@#;>0@@@EMAIL:<<<dEmail>>>@@@sqlpathfinder_style_1.css@@@E->Y@@@RR->NO@@@B->Y@@@EM-A->@@@EM-S->@@@SEC->Y@@@Text:1:white<:>black<:>N<:>N<:>N<:>intel clear<:>11<:>Left<:>The following lot(s) shall be put on hold due to does not appear in ADVI Image Analytic CA completed lot list. <span style=<~>color:blue<~>>Read carefully the email sent by ICATCH, the lot(s) may not sucessfully hold under certain circumstances.</span>|MYREPORT2:1|Images:1:RFC.PNG+1|Text:1:white<:>black<:>N<:>N<:>N<:>intel clear<:>11<:>Left<:><b>Current configurations for Last-Gate Screening:</b><br>1. Last-Gate Screening Enabled?: <span style=<~>color:blue<~>><<<dLastGate>>></span><br>2. Time scope: <span style=<~>color:blue<~>>Last <<<dTrange>>> day(s)</span> (self-corrected to 1 if set to <= 0)<br>3. ADVI operation(s): <span style=<~>color:blue<~>><<<dOper>>></span><br>4. Last-gate operation(s): <span style=<~>color:blue<~>><<<dGate>>></span><br>5. Product(s) excluded: <span style=<~>color:blue<~>><<<dProdExc>>></span><br>6. Tool(s) excluded: <span style=<~>color:blue<~>><<<dToolExc>>></span>|JMP-HTML:1:revision_ia.htm@@@</@#;>Win3</@#;><<<dGateSubject>>>"
+"HTML-END"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Else:Y{ELSE}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->HTML-Report:YYN24404"
+"UTILITIESDESC:","sending email when last-gate-checking detains lot(s) w/o RFC"
+"HTML-BEGIN",""
+"HTML-SCRIPT"
+"HTML-REPORT:MYREPORT2_4</@#;>AQC</@#;>"
+"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Type<\\>Key<\\>COL1<\\>COL2<\\>COL3<\\>COL4<\\>COL5<\\>COL6<\\>COL7<\\>COL8<\\>COL9<\\>COL10<\\>COL11<\\>COL12"
+"TYPE<\\>HTML<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"INPUT-FILE<\\>RESULT_MICJAQC_.csv<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"OUTPUT-FILE<\\>SQLPathFinder.htm<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"CSS<\\>sqlpathfinder_style_1.css<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"COLSPAN<\\>@<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DRILLDOWN<\\>N<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DYNAMICSORT<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DYNAMICFILTER<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"ATTOPDRILLDOWN<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"NOPREPROCESS<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"COLUMN-DATA<\\><\\>prod<\\>lot<\\>oper<\\>deo<\\>movein_date<\\>movedin<\\>onhold<\\>entity<\\><\\><\\><\\>"
+"COLUMN-HEADERS<\\><\\>Product<\\>Lot<\\>Oper<\\>Date@Enter Oper<\\>Date@MVIN<\\>Flag@MVIN<\\>Flag@Onhold<\\>Entity<\\><\\><\\><\\>"
+"COLUMN-ALIGNMENT<\\><\\>middle-center<\\>middle-left<\\>middle-center<\\>middle-left<\\>middle-left<\\>middle-center<\\>middle-center<\\>middle-center<\\><\\><\\><\\>"
+"COLUMN-FORMAT<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"HTML-REPORT-SPEC-END"
+"HTML-CREATE WINDOW:WIN3</@#;>0@@@EMAIL:<<<dEmail>>>@@@sqlpathfinder_style_1.css@@@E->Y@@@RR->NO@@@B->Y@@@EM-A->@@@EM-S->@@@SEC->Y@@@Text:1:white<:>black<:>N<:>N<:>N<:>intel clear<:>11<:>Left<:>The following lot(s) shall be put on hold due to does not appear in ADVI Image Analytic CA completed lot list. <span style=<~>color:blue<~>>Read carefully the email sent by ICATCH, the lot(s) may not sucessfully hold under certain circumstances.</span>|MYREPORT2_4:1|Text:1:white<:>black<:>N<:>N<:>N<:>intel clear<:>11<:>Left<:><b>Current configurations for Last-Gate Screening:</b><br>1. Last-Gate Screening Enabled?: <span style=<~>color:blue<~>><<<dLastGate>>></span><br>2. Time scope: <span style=<~>color:blue<~>>Last <<<dTrange>>> day(s)</span> (self-corrected to 1 if set to <= 0)<br>3. ADVI operation(s): <span style=<~>color:blue<~>><<<dOper>>></span><br>4. Last-gate operation(s): <span style=<~>color:blue<~>><<<dGate>>></span><br>5. Product(s) excluded: <span style=<~>color:blue<~>><<<dProdExc>>></span><br>6. Tool(s) excluded: <span style=<~>color:blue<~>><<<dToolExc>>></span>|JMP-HTML:1:revision_ia.htm@@@</@#;>Win3</@#;><<<dGateSubject>>>"
+"HTML-END"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rename:Y@EXEDIR@\SPFRename.va <~>RESULT_MICJAQC_.csv<~> <~>RESULT_MICJAQC_<TS>.csv<~>"
+"UTILITIESDESC:","add timestamps"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Copy:Y@EXEDIR@\SPFCopy.bat <~>RESULT_MICJAQC_*.csv<~> <~>\\<<<dCSR>>>\<~> <~>N<~>"
+"UTILITIESDESC:","dump to CSR folder"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"f(a0)->'Y'","HOLD_LOT","Y","None","None","Row","C","***","@if@1","a0->'Y'","col64"
+"a0.lot","LOT","Y","None","None","Row","c","Identifies a batch of wafers or units being processed in the factory.The basic format of the Lot number is: ?FYWWNNNN where F=fab code, Y=year, WW=workweek, NNNN= sequence, with the 9th or 10th characters as alphanumeric. In Fab, Etest and Sort, a quantity that has a wafer as an unit of measure and the physical form that passes through the factory. A lot starting the Fab process contains up to 25 wafers and can be split into child lots of varying sizes, and wafer losses can also occur. New lots are also created to split lots due to varying characteristics, such as speed or rework, for a portion of the lot. In some 200mm fabs production lots, the lot number uses a silicon vendor ID in the 8th character","f_lothist","a0->f0.lot","col42"
+"f(a0)->'<<<dEmail>>>'","EMAIL","Y","None","None","Row","C","***","@if@1","a0->'<<<dEmail>>>'","col65"
+"f(a0)->'<<<dCCB>>>'","CCB_NUMBER","Y","None","None","Row","C","***","@if@1","a0->'<<<dCCB>>>'","col66"
+"f(a0)->'<<<dHNote>>>'","HOLD_NOTE","Y","None","None","Row","C","***","@if@1","a0->'<<<dHNote>>>'","col67"
+"f(a0)->'<<<dHCat>>>'","HOLDCATEGORY","Y","None","None","Row","C","***","@if@1","a0->'<<<dHCat>>>'","col68"
+"f(a0)->'<<<dFIFO>>>'","FIFO","Y","None","None","Row","C","***","@if@1","a0->'<<<dFIFO>>>'","col69"
+"a0.date_entered__operation","deo","Y","None","None","Row","d","The date and time the lot arrived at the current operation.","f_lot","a0->f9.date_entered_operation","col50"
+"a0.in_date","movein_date","Y","None","None","Row","d","The date and time the lot was moved into the operation using the MVIN transaction. Equals zero (0) if th elot was not moved in.","f_lothist","a0->f0.in_date","col44"
+"a0.out_date","out_date","--","None","None","Row","d","The date the lot moved out of the operation. If the lot has not moved out, the value will be NULL. This column is used in date indices instead of Last_Action_Date as Last_Action_Date changes for every transaction for the lot at the operation.","f_lothist","a0->f0.out_date","col43"
+"a0.current_movedin","movedin","Y","None","None","Row","c","Indicates if a move in transaction has been performed at the current operation. Y means a moved in transaction has been performed.","f_lot","a0->f9.movedin","col48"
+"a0.current_onhold","onhold","Y","None","None","Row","c","Flag indicating if the lot is currently on hold. Y means the lot is on hold and N means the lot is not on hold.","f_lot","a0->f9.onhold","col49"
+"f(a0)->REPLACE(REPLACE(REPLACE( SYSDATE , '-' , '') , ':' , '') , ' ' , '')","tstamp","Y","None","None","Row","C","***","@if@1","a0->REPLACE(REPLACE(REPLACE( SYSDATE , '-' , '') , ':' , '') , ' ' , '')","col46"
+"a0.operation","oper","Y","None","None","Row","c","Identifies a manufacturing process step or a holding point","f_lothist","a0->f0.operation","col45"
+"a0.movedout_txn","txnt","Y","None","None","Row","c","The transaction used to move the lot out of the operation. May want to filter where this transaction is equal to MVOU. Will equal to space if the lot is still at the operation. Sample Move out transactions include: MVOU - Move out ?was done; ?Transfer to Stores (TRST); Ship lot (SHLT); Rework lot (RWLT), 5: Non standard Move (MVNS); ?A lot was adjusted to be at another operation (ADLT);7Transfer Lot (TFLT), SPLT - Split a lot and leave the parent lot with zero quantity","f_lothist","a0->f0.movedout_txn","col51"
+"a0.prodgroup3","prod","Y","None","None","Row","c","Product Classification column.","f_product","a0->p.prodgroup3","col70"
+"a1.lot","lot_1","P","None","None","Row","c","Identifies a batch of wafers or units being processed in the factory.The basic format of the Lot number is: ?FYWWNNNN where F=fab code, Y=year, WW=workweek, NNNN= sequence, with the 9th or 10th characters as alphanumeric. In Fab, Etest and Sort, a quantity that has a wafer as an unit of measure and the physical form that passes through the factory. A lot starting the Fab process contains up to 25 wafers and can be split into child lots of varying sizes, and wafer losses can also occur. New lots are also created to split lots due to varying characteristics, such as speed or rework, for a portion of the lot. In some 200mm fabs production lots, the lot number uses a silicon vendor ID in the 8th character","f_lothist","a1->f0.lot","col55"
+"a1.operation","operation","P","None","None","Row","c","Identifies a manufacturing process step or a holding point","f_lothist","a1->f0.operation","col61"
+"a1.entity","entity","Y","None","None","Row","c","Typically identifies a piece of equipment though in some FACILITIES it might be a reticle ID. E.g., VDF027 might be the identifier for a diffusion tube at a GATE OXIDE operation.","f_entitylothist","a1->f4.entity","col56"
+"a1.current_operation","current_operation","Y","None","None","Row","c","The current operation (or processing step) the lot is at","f_lot","a1->f9.operation","col57"
+"f(x)->UPPER(SUBSTR( {filename} ,1, CharIndex_v2('.C', UPPER({filename}) ,1,1) -1))","lot_ca","P","None","None","Row","C","***","","SQL->UPPER(SUBSTR( {col58} ,1, CharIndex_v2('.C', UPPER({col58}) ,1,1) -1))","col59"
+"a2.filename","filename","P","None","None","Row","c","","csv","SQL->a2.[filename]","col58"
+"f(x)->CASE WHEN {lot_1} Is NULL THEN 0 WHEN  {lot_ca} Is NOT NULL THEN 0 WHEN  {entity} In ('<<<dToolExc>>>') THEN 0 ELSE 1 END","vflag","P","None","None","Row","N","***","f_entitylothist","All->CASE WHEN {col55} Is NULL THEN 0 WHEN  {col59} Is NOT NULL THEN 0 WHEN  {col56} In ('<<<dToolExc>>>') THEN 0 ELSE 1 END","col63"
+"f(x)->CASE WHEN {lot_1} Is NULL THEN 0 WHEN  {lot_ca} Is NOT NULL THEN 0 ELSE 1 END","vflag_orig","P","None","None","Row","N","***","","All->CASE WHEN {col55} Is NULL THEN 0 WHEN  {col59} Is NOT NULL THEN 0 ELSE 1 END","col71"
+"JOINGRID:"
+"AND","","View->a0.lot                                                                                                    : a0->{col42}","=","View->a1.lot                                                                                                    : a1->{col55}",""
+"AND","","View->a0.lot                                                                                                    : a0->{col42}","=","Sqlite->f(x)->lot_ca                                                                                                    : SQL->{col59}",""
+"FILTERGRID:"
+"AND NOT","","a0.prodgroup3","In","'<<<dProdExc>>>'","","","c","f_product","a0->p.prodgroup3",""
+"AND NOT","","a0.lot","In Group",".\AQCCSRrecords.csv:1. LOT","",".","c","f_lothist","a0->f0.lot",""
+"AND NOT","","a0.lot","In Group",".\CSRRecords.csv:1. LOT","",".","c","f_lothist","a0->f0.lot",""
+"AND","","a0.operation","In","'<<<dGate>>>'","","","c","f_lothist","a0->f0.operation",""
+"AND","(","a0.out_date",">=","SYSDATE - <<<dTrange>>>","",".","d","f_lothist","a0->f0.out_date",""
+"OR","","a0.load_date",">=","SYSDATE - <<<dTrange>>>",")",".","d","f_lothist","a0->f0.load_date",""
+"AND NOT","","a0.owner","=","'TEST'","","","c","f_lothist","a0->f0.owner",""
+"AND","","a0.newqty1",">","0","","","n","f_lothist","a0->f0.newqty1",""
+"AND","","a0.last_pass","=","'Y'","","","c","f_lothist","a0->f0.last_pass",""
+"AND","","a1.lot","In Temp"," {View (a0)}^^^^^100 : View->a0.lot","",".","c","f_lothist","a1->f0.lot","a0->{col42}"
+"AND","","a1.operation","In","'<<<dOper>>>'","","","c","f_lothist","a1->f0.operation",""
+"AND","","a1.last_pass","=","'Y'","","","c","f_lothist","a1->f0.last_pass",""
+"AND NOT","","a2.filename","Like","'Filename%'","","","c","csv","SQL->a2.[filename]",""
+"AND","","f(x)->{vflag}","=","1","","","nx","@IF@1","All->{col63}",""
+"-- AND","","f(x)->{vflag_orig}","=","1","","","nx","@IF@1","All->{col71}",""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/END_EMBED
+/EMBED=VG2;Update
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","No"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","No"
+"TERMINAL:","Yes"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:",""
+"EXCEL:","out_22827.tab"
+"ROW:","No"
+"EMBED:","Y"
+"JOINDUCKDB:","N"
+"INCNESTUTIL:","N"
+"QUERYROWS:","0"
+"JOINROWS:","0"
+"FILTERROWS:","0"
+"COL_ID_COUNTER:","0"
+"CHART_COUNTER:","0"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","0"
+"CL_SITE","PG</@#;><<<CL_SITE>>>"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:Yupdate.bat<SOF><{><}>@echo off<{><}>set currd=%date:~10,4%-%date:~4,2%-%date:~7,2%<{><}>set currms=%time:~2,6%<{><}>set /a currh=%time:~0,2%<{><}>if %currh% LSS 10 set currh=0%currh%<{><}>set currt=%currh%%currms%<{><}>set PriConfig=<<<IREPOP>>>\<<<SFOLDER>>><{><}><{><}><{><}>REM ************** edit here only if needed **************<{><}><{><}>set record=<<<DCSR>>>,<<<DMST>>>,<<<DMWF>>><{><}><{><}><{><}><{><}><{><}>REM *************** do not edit below here ***************<{><}><{><}>call :retry<{><}>goto:eof<{><}><{><}>:retry<{><}>set /a tries=300<{><}><{><}>:loop<{><}>if %tries% LEQ 0 goto return<{><}>echo <<<STARTTS>>>,%currd% %currt%,<<<UTC>>>,<<<CL_SITE>>>,<<<%username%>>>,<<<UNDERDEV>>>,%record%>>%PriConfig%\VF_CE.txt && goto return || set /a tries-=1 && ping -n 1 127.0.0.1>nul 2>&1 && goto loop<{><}><{><}>:return<{><}>@exit /B"
+"UTILITIESDESC:","create update.bat"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->DOS:Yupdate.bat"
+"UTILITIESDESC:","run update.bat"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Delete:Y@EXEDIR@\SPFDelete.bat <~>update.bat<~> <~>N<~>"
+"UTILITIESDESC:","delete update.bat"
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"JOINGRID:"
+"FILTERGRID:"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/END_EMBED
+/EMBED=VG2;CSR and MMS Signal Tracer
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","No"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","No"
+"TERMINAL:","Yes"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:",""
+"EXCEL:","out_4534.tab"
+"ROW:","No"
+"EMBED:","Y"
+"INCNESTUTIL:","N"
+"QUERYROWS:","0"
+"JOINROWS:","0"
+"FILTERROWS:","0"
+"COL_ID_COUNTER:","0"
+"CHART_COUNTER:","0"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","0"
+"CL_SITE","PG</@#;><<<CL_SITE>>>"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Copy:Y"
+"UTILITIESDESC:","Copy Files/Folders"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rows-In-File:Y"
+"UTILITIESDESC:","Count Rows in a File"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>VAR(<<<DCSR>>>)<~> <~>EQS<~> <~>Y<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","Apply Conditional Logic"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->RoboCopy:Y"
+"UTILITIESDESC:","Robocopy Files/Folders"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Else:Y{ELSE}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->RoboCopy:Y"
+"UTILITIESDESC:","Robocopy Files/Folders"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"JOINGRID:"
+"FILTERGRID:"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/END_EMBED
+/EMBED=VG2;IAM
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","Yes"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","Yes"
+"TERMINAL:","No"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:",""
+"EXCEL:","IAMantimixing.csv"
+"ROW:","No"
+"EMBED:","Y"
+"INCNESTUTIL:","N"
+"QUERYROWS:","13"
+"JOINROWS:","2"
+"FILTERROWS:","10"
+"COL_ID_COUNTER:","17"
+"CHART_COUNTER:","2"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","0"
+"CL_SITE","PG</@#;><<<CL_SITE>>>"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rows-In-File:Y{ROWS-IN-FILE} <~><<<LOT>>>.tab<~> <~>TAB<~> <~>N<~>"
+"UTILITIESDESC:","check presence of <<<LOT>>>.tab"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>TAB<~> <~>GT<~> <~>0<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if <<<LOT>>>.tab is present"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Delete:Y@EXEDIR@\SPFDelete.bat <~>IPMSdata.tab,IAM.txt<~> <~>N<~>"
+"UTILITIESDESC:","delete IPMSdata.tab & IAM.txt"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:YIAM.txt<SOF><{><}>EMAIL<{><}>alex.chin.hooi.lee@intel.com<{><}>shaw.huong.chin@intel.com<{><}>kean.hang.choo@intel.com<{><}>rajesvaran.kr.karuppan.chetty@intel.com"
+"UTILITIESDESC:","create IAM.txt for beta testing"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Copy:Y@EXEDIR@\SPFCopy.bat <~><<<LOT>>>.tab<~> <~>IPMSdata.tab<~> <~>N<~>"
+"UTILITIESDESC:","copy <<<LOT>>>.tab to IPMSdata.tab"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Wait-File:Y@EXEDIR@\WaitFile.va <~>IPMSdata.tab<~> <~>3<~>"
+"UTILITIESDESC:","wait for IPMSdata.tab"
+"<---- New Query ---->","1:5:SQL"
+"TABLEGRID:","1"
+"","IPMSdata.tab a0",""
+"MARSNODE:","<<<MARS>>>"
+"ARIESNODE:","<<<ARIES>>>"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","@[]@"
+"DATABASETYPE:","SQLite"
+"SINGLENODE:","TEXT (SQLite)"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Fetching Text (SQLite) Data"
+"DISTINCT:","Yes"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"PREPROCESS_CSV:","No"
+"NOHDRS:","No"
+"CARTESIAN:","No"
+"<---- New Query ---->","2:2:a1"
+"TABLEGRID:","1"
+"","AT_Metrology",""
+"MARSNODE:","<<<MARS>>>"
+"ARIESNODE:","<<<ARIES>>>"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","@[]@"
+"DATABASETYPE:","Oracle"
+"SINGLENODE:","<<<ARIES>>>"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Fetching ARIES Data"
+"DISTINCT:","No"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"FIRST_ROWS:","No"
+"ORDERED:","No"
+"OTHER-HINT:","No"
+"<---- New Query ---->","2:0:a2"
+"TABLEGRID:","1"
+"","F_Lot_History_v3",""
+"MARSNODE:","<<<MARS>>>"
+"ARIESNODE:","<<<ARIES>>>"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","@[]@"
+"DATABASETYPE:","Oracle"
+"SINGLENODE:","<<<MARS>>>"
+"SINGLESCHEMA:","@[]@"
+"PROMPT-TEXT:","Fetching MARS Data"
+"DISTINCT:","Yes"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"FIRST_ROWS:","No"
+"ORDERED:","No"
+"OTHER-HINT:","No"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rows-In-File:Y{ROWS-IN-FILE} <~>IAMantimixing.csv<~> <~>AlienIAM<~> <~>N<~>"
+"UTILITIESDESC:","count content of IAMantimixing.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>AlienIAM<~> <~>GT<~> <~>0<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if >= 1 row"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>VAR(<<<DCSRIAM>>>)<~> <~>EQS<~> <~>Y<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if CSR is enabled"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:YRESULT.csv<SOF><{><}>"
+"UTILITIESDESC:","create RESULT.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rename:Y"
+"UTILITIESDESC:","Rename Files"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Delete:Y@EXEDIR@\SPFDelete.bat <~>RESULT.csv<~> <~>N<~>"
+"UTILITIESDESC:","delete RESULT.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->RoboCopy:Y@EXEDIR@\RoboCopy.va <~>RESULT_*.csv<~> <~>.<~> <~><<<CSRPATH>>><~> <~>5<~> <~>30<~> <~>N<~> <~>/MOV<~> <~>N<~>"
+"UTILITIESDESC:","submit to CSR"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Else:Y{ELSE}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:YRESULT.csv<SOF><{><}>"
+"UTILITIESDESC:","create RESULT.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rename:Y"
+"UTILITIESDESC:","Rename Files"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Delete:Y@EXEDIR@\SPFDelete.bat <~>RESULT.csv<~> <~>N<~>"
+"UTILITIESDESC:","delete RESULT.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->RoboCopy:Y@EXEDIR@\RoboCopy.va <~>RESULT_*.csv<~> <~>.<~> <~>\\AZATSHFS.intel.com\AZATAnalysis$\MAOATM\Config\VF_POR_Cfg\ICM_PCS\<<<SFOLDER>>>\<<<CL_SITE>>>\HIST<~> <~>5<~> <~>30<~> <~>N<~> <~>/MOV<~> <~>N<~>"
+"UTILITIESDESC:","submit to HIST"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->HTML-Report:YYN30819"
+"UTILITIESDESC:","Create an HTML Report"
+"HTML-BEGIN",""
+"HTML-SCRIPT"
+"HTML-REPORT:MYREPORT1</@#;>MyReport1</@#;>"
+"
+
+
+
+
+
+
+
+
+Type<\\>Key<\\>COL1<\\>COL2<\\>COL3<\\>COL4<\\>COL5<\\>COL6<\\>COL7<\\>COL8<\\>COL9<\\>COL10<\\>COL11<\\>COL12"
+"TYPE<\\>HTML<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"INPUT-FILE<\\>IAMantimixing.csv<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"OUTPUT-FILE<\\>SQLPathFinder.htm<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"CSS<\\>sqlpathfinder_style_1.css<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"COLSPAN<\\>@<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DRILLDOWN<\\>N<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DYNAMICSORT<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DYNAMICFILTER<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"ATTOPDRILLDOWN<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"NOPREPROCESS<\\>Y<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"COLUMN-DATA<\\><\\>vid<\\>lot<\\>lot_alien<\\>ins<\\>ucnt<\\>ucnt_all<\\><\\><\\><\\><\\><\\>"
+"COLUMN-HEADERS<\\><\\>Visual ID<\\>Lot@IAM<\\>Lot@Alien<\\>Qty@IAM (WS)<\\>Qty@Log (Unique)<\\>Qty@Log (Non-Unique)<\\><\\><\\><\\><\\><\\>"
+"COLUMN-ALIGNMENT<\\><\\>middle-left<\\>middle-left<\\>middle-left<\\>middle-right<\\>middle-right<\\>middle-right<\\><\\><\\><\\><\\><\\>"
+"COLUMN-FORMAT<\\><\\><\\><\\><\\>d=n<\\>d=n<\\>d=n<\\><\\><\\><\\><\\><\\>"
+"HTML-REPORT-SPEC-END"
+"HTML-CREATE WINDOW:WIN2</@#;>0@@@EMAIL:<<<DEMAIL>>>@@@sqlpathfinder_style_1.css@@@E->Y@@@RR->NO@@@B->Y@@@EM-A->@@@EM-S->@@@SEC->Y@@@Text:1:white<:>black<:>N<:>N<:>N<:>intel clear<:>11<:>Left<:>Below is the list of unit(s) that suspected mixed with other lot.|MYREPORT1:1|Text:1:white<:>black<:>N<:>N<:>N<:>intel clear<:>11<:>Left<:><pre><strong>Configurations applied</strong><br>1. JBA:<br>&#009<-s-c->CSR enabled: <strong><span style=color:blue><<<DCSRJBA>>></span></strong><br>&#009<-s-c->MMS Signal Tracer enabled: <strong><span style=color:blue><<<DMSTJBA>>></span></strong><br>2. IAM:<br>&#009<-s-c->CSR enabled: <strong><span style=color:blue><<<DCSRIAM>>></span></strong><br>&#009<-s-c->MMS Signal Tracer enabled: <strong><span style=color:blue><<<DMSTIAM>>></span></strong></pre>|JMP-HTML:1:revision.htm@@@</@#;>Win2</@#;>IAM Mixing Alert: <<<LOT>>> (<<<PROD>>>; <<<ENTITY>>> @ <<<OUT_DATE>>>) - <<<CL_SITE>>> - <<<CL_SITE>>>"
+"HTML-END"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>VAR(<<<DMSTIAM>>><~> <~>EQS<~> <~>Y<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if MST is enabled"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:YALARM.csv<SOF><{><}>"
+"UTILITIESDESC:","create ALARM.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rename:Y"
+"UTILITIESDESC:","Rename Files"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Delete:Y@EXEDIR@\SPFDelete.bat <~>ALARM.csv<~> <~>N<~>"
+"UTILITIESDESC:","delete ALARM.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->RoboCopy:Y@EXEDIR@\RoboCopy.va <~>ALARM_*.csv<~> <~>.<~> <~><<<MMSPATH>>><~> <~>5<~> <~>30<~> <~>N<~> <~>/MOV<~> <~>N<~>"
+"UTILITIESDESC:","submit to MMS"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Else:Y{ELSE}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:YALARM.csv<SOF><{><}>"
+"UTILITIESDESC:","create ALARM.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rename:Y"
+"UTILITIESDESC:","Rename Files"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Delete:Y@EXEDIR@\SPFDelete.bat <~>ALARM.csv<~> <~>N<~>"
+"UTILITIESDESC:","delete ALARM.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->RoboCopy:Y@EXEDIR@\RoboCopy.va <~>ALARM_*.csv<~> <~>.<~> <~>\\AZATSHFS.intel.com\AZATAnalysis$\MAOATM\Config\VF_POR_Cfg\ICM_PCS\<<<SFOLDER>>>\<<<CL_SITE>>>\HIST<~> <~>5<~> <~>30<~> <~>N<~> <~>/MOV<~> <~>N<~>"
+"UTILITIESDESC:","submit to HIST"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Delete:Y@EXEDIR@\SPFDelete.bat <~>IAMantimixing.csv,<<<LOT>>>.tab<~> <~>N<~>"
+"UTILITIESDESC:","Delete Files"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Else:Y{ELSE}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>VAR(<<<AGE>>>)<~> <~>GT<~> <~>5<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if > 5hr since move out"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Email:Y@EXEDIR@\SQLPathFinder_Email.va <~><~> <~>self<~> <~>IAM missing: <<<LOT>>> (<<<PROD>>>; <<<ENTITY>>> @ <<<OUT_DATE>>>; <<<AGE>>> hrs)<~> <~>revision.htm<~> <~><~> <~><~> <~><~> <~>N<~> <~><<<spf-email-type>>><~>"
+"UTILITIESDESC:","email missing"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"a0.2d barcode","vid","Y","None","None","Row","c","","csv","SQL->a0.[2d barcode]","col1"
+"f(x)->'<<<LOT>>>'","lot","Y","None","None","Row","C","***","","SQL->'<<<LOT>>>'","col8"
+"a0.lot id","lot_ipms","Y","None","None","Row","c","","csv","SQL->a0.[lot id]","col2"
+"a1.visual_id","visual_id","P","None","None","Row","c","A visual mark (laser read bar code) found on either unit (for PPV) or cartridge containing it (SYSTEST/OQA)","a_device_item","a1->di.visual_id","col3"
+"a1.tray_or_carrier_id","media_id","P","None","None","Row","c","Identification of a tray within specific testing session.","a_device_testing","a1->dt.testing_session_tray_id","col15"
+"a1.lot","lot_alien","Y","None","None","Row","c","Workstream lot name. In Assembly/Test flow steps it is also known as TPO, APO or FPO","a_testing_session","a1->ats.lot","col4"
+"a2.lot","lot_ws","P","None","None","Row","c","Identifies a batch of wafers or units being processed in the factory.The basic format of the Lot number is: ?FYWWNNNN where F=fab code, Y=year, WW=workweek, NNNN= sequence, with the 9th or 10th characters as alphanumeric. In Fab, Etest and Sort, a quantity that has a wafer as an unit of measure and the physical form that passes through the factory. A lot starting the Fab process contains up to 25 wafers and can be split into child lots of varying sizes, and wafer losses can also occur. New lots are also created to split lots due to varying characteristics, such as speed or rework, for a portion of the lot. In some 200mm fabs production lots, the lot number uses a silicon vendor ID in the 8th character","f_lothist","a2->f0.lot","col9"
+"a2.oldqty1","ins","Y","None","None","Row","n","The quantity of original units in the lot after the last transaction was executed for the lot at the operation. ?Ultimately, it will equal the number of wafers (or units) in the lot to use when computing yield. Equals Out quantity + losses. ?In MES300, on the lot move out, this column should be set to equal newqty1 + lossqty1. That is because losses could be taken at any point while the lot is at the operation. Hence no losses may occur on the move out transaction but there were losses while the lot was at the operation.","f_lothist","a2->f0.oldqty1","col10"
+"a2.newqty1","outs","Y","None","None","Row","n","The number of wafers (or units) in the lot aftrer the last transaction was executed. Ultimately, it will equal the quantity of units in the lot when it is moved out of this operation.","f_lothist","a2->f0.newqty1","col11"
+"f(x)->COUNT (DISTINCT  {vid} ) OVER (PARTITION BY  {lot}  )","ucnt","Y","None","None","Row","N","***","@if@1","SQL->COUNT (DISTINCT  {col1} ) OVER (PARTITION BY  {col8}  )","col12"
+"f(x)->COUNT ( {vid} ) OVER (PARTITION BY {lot} )","ucnt_all","Y","None","None","Row","N","***","@if@1","SQL->COUNT ( {col1} ) OVER (PARTITION BY {col8} )","col13"
+"f(x)->COUNT ( DISTINCT {visual_id} ) OVER (PARTITION BY {media_id} )","ucpm_all","P","None","None","Row","N","***","","All->COUNT ( DISTINCT {col3} ) OVER (PARTITION BY {col15} )","col16"
+"f(x)->CASE WHEN {vid} Like '[empty]%' THEN 0 WHEN {ucnt} > MAX ( {ucpm_all} ) OVER (PARTITION BY {lot} ) * 112 THEN 0 WHEN {lot} is NULL THEN 1 WHEN {lot} <> {lot_alien} THEN 1 ELSE 0 END","tflag_new","P","None","None","Row","N","***","@if@1","All->CASE WHEN {col1} Like '[empty]%' THEN 0 WHEN {col12} > MAX ( {col16} ) OVER (PARTITION BY {col8} ) * 112 THEN 0 WHEN {col8} is NULL THEN 1 WHEN {col8} <> {col4} THEN 1 ELSE 0 END","col17"
+"JOINGRID:"
+"AND","","Sqlite->a0.2d barcode                                                                                                    : SQL->{col1}","=","View->a1.visual_id                                                                                                    : a1->{col3}",""
+"AND","","Sqlite->f(x)->lot                                                                                                    : SQL->{col8}","=","View->a2.lot                                                                                                    : a2->{col9}",""
+"FILTERGRID:"
+"AND NOT","","a0.2d barcode","Like List","'2D %'","","","c","csv","SQL->a0.[2d barcode]",""
+"AND NOT","","a0.2d barcode","Is Null","","","","c","csv","SQL->a0.[2d barcode]",""
+"AND NOT","","a0.component condition","=","'9'","","","c","csv","SQL->a0.[component condition]",""
+"-- AND","","a1.ctr_latest_flag","=","'Y'","","","c","a_all_component_testing_result","a1->ctr.latest_flag",""
+"AND","","a1.visual_id","In Temp"," {Sqlite (all)}^^^^^10 : Sqlite->a0.2d barcode","",".","c","a_device_item","a1->di.visual_id","SQL->{col1}"
+"AND","","a1.operation","=","'1990'","","","c","a_testing_session","a1->ats.operation",""
+"AND","","a1.tester_id","Like","'ACS%'","","","c","a_testing_session","a1->ats.tester_id",""
+"AND","","a2.lot","=","'<<<LOT>>>'","",".","c","f_lothist","a2->f0.lot",""
+"AND","","a2.operation","=","'1992'","","","c","f_lothist","a2->f0.operation",""
+"AND","","f(x)->{tflag_new}","=","1","","","nx","@IF@2","All->{col17}",""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/END_EMBED
+/EMBED=VG2;JBA
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","No"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","Yes"
+"TERMINAL:","No"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:",""
+"EXCEL:","JBAantimixing.csv"
+"ROW:","No"
+"EMBED:","Y"
+"INCNESTUTIL:","N"
+"QUERYROWS:","22"
+"JOINROWS:","6"
+"FILTERROWS:","17"
+"COL_ID_COUNTER:","27"
+"CHART_COUNTER:","2"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","0"
+"CL_SITE","PG</@#;><<<CL_SITE>>>"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rows-In-File:Y{ROWS-IN-FILE} <~><<<LOT>>>.xml<~> <~>XML<~> <~>N<~>"
+"UTILITIESDESC:","check presence of <<<LOT>>>.xml"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>XML<~> <~>GT<~> <~>0<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if <<<LOT>>>.xml is present"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Delete:Y@EXEDIR@\SPFDelete.bat <~>LotOutput.csv,JBA.txt<~> <~>N<~>"
+"UTILITIESDESC:","delete LotOutput.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:YJBA.tx<SOF><{><}>EMAIL<{><}>alex.chin.hooi.lee@intel.com<{><}>shaw.huong.chin@intel.com<{><}>kean.hang.choo@intel.com<{><}>rajesvaran.kr.karuppan.chetty@intel.com"
+"UTILITIESDESC:","create mailing list JBA.txt for beta testing"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->XML-TO-CSV:Y@EXEDIR@\XMLToCSV.va <~><<<LOT>>>.xml<~> <~>LotOutput.csv<~>"
+"UTILITIESDESC:","convert <<<LOT>>>.xml to LotOutput.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Wait-File:Y@EXEDIR@\WaitFile.va <~>LotOutput.csv<~> <~>3<~>"
+"UTILITIESDESC:","wait for LotOutput.csv"
+"<---- New Query ---->","1:5:SQL"
+"TABLEGRID:","1"
+"","LotOutput.csv a0",""
+"MARSNODE:","<<<MARS>>>"
+"ARIESNODE:","<<<ARIES>>>"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","@[]@"
+"DATABASETYPE:","SQLite"
+"SINGLENODE:","TEXT (SQLite)"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Fetching Text (SQLite) Data"
+"DISTINCT:","No"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"PREPROCESS_CSV:","No"
+"NOHDRS:","No"
+"CARTESIAN:","No"
+"<---- New Query ---->","2:2:a1"
+"TABLEGRID:","1"
+"","AT_Metrology",""
+"MARSNODE:","<<<MARS>>>"
+"ARIESNODE:","<<<ARIES>>>"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","@[]@"
+"DATABASETYPE:","Oracle"
+"SINGLENODE:","<<<ARIES>>>"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Fetching ARIES Data"
+"DISTINCT:","No"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"FIRST_ROWS:","No"
+"ORDERED:","No"
+"OTHER-HINT:","No"
+"<---- New Query ---->","2:0:a2"
+"TABLEGRID:","1"
+"","F_Lot_History_v3",""
+"MARSNODE:","<<<MARS>>>"
+"ARIESNODE:","<<<ARIES>>>"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","@[]@"
+"DATABASETYPE:","Oracle"
+"SINGLENODE:","<<<MARS>>>"
+"SINGLESCHEMA:","@[]@"
+"PROMPT-TEXT:","Fetching MARS Data"
+"DISTINCT:","Yes"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"FIRST_ROWS:","No"
+"ORDERED:","No"
+"OTHER-HINT:","No"
+"<---- New Query ---->","2:0:a3"
+"TABLEGRID:","1"
+"","F_Lot_History_v3",""
+"MARSNODE:","<<<MARS>>>"
+"ARIESNODE:","<<<ARIES>>>"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","@[]@"
+"DATABASETYPE:","Oracle"
+"SINGLENODE:","<<<MARS>>>"
+"SINGLESCHEMA:","@[]@"
+"PROMPT-TEXT:","Fetching MARS Data"
+"DISTINCT:","No"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"FIRST_ROWS:","No"
+"ORDERED:","No"
+"OTHER-HINT:","No"
+"<---- New Query ---->","2:2:a4"
+"TABLEGRID:","1"
+"","ULT_AT",""
+"MARSNODE:","<<<MARS>>>"
+"ARIESNODE:","<<<ARIES>>>"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","@[]@"
+"DATABASETYPE:","Oracle"
+"SINGLENODE:","<<<ARIES>>>"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Fetching ARIES Data"
+"DISTINCT:","No"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"FIRST_ROWS:","No"
+"ORDERED:","No"
+"OTHER-HINT:","No"
+"<---- New Query ---->","2:0:a5"
+"TABLEGRID:","1"
+"","F_Lot_History_v3",""
+"MARSNODE:","<<<MARS>>>"
+"ARIESNODE:","<<<ARIES>>>"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","@[]@"
+"DATABASETYPE:","Oracle"
+"SINGLENODE:","<<<MARS>>>"
+"SINGLESCHEMA:","@[]@"
+"PROMPT-TEXT:","Fetching MARS Data"
+"DISTINCT:","No"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"FIRST_ROWS:","No"
+"ORDERED:","No"
+"OTHER-HINT:","No"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rows-In-File:Y{ROWS-IN-FILE} <~>JBAantimixing.csv<~> <~>AlienJBA<~> <~>N<~>"
+"UTILITIESDESC:","count content of JBAantimixing.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>AlienJBA<~> <~>GT<~> <~>0<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if found alien"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>VAR(<<<DCSRJBA>>>)<~> <~>EQS<~> <~>Y<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if CSR is enabled"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:YRESULT.csv<SOF><{><}>LOT,HOLD_LOT,EMAIL,CCB_NUMBER,HOLD_NOTE,HOLDCATEGORY,FIFO<{><}><<<LOT>>>,Y,<<<DEMAIL>>>,<<<DCCB>>>,<<<DHNOTE>>>,<<<DHCAT>>>,Y"
+"UTILITIESDESC:","create RESULT.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rename:Y@EXEDIR@\SPFRename.va <~>RESULT.csv<~> <~>RESULT_<<<%username%>>>_MixingDetection_<TS>.csv<~>"
+"UTILITIESDESC:","rename and add timestamp"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Delete:Y@EXEDIR@\SPFDelete.bat <~>RESULT.csv<~> <~>N<~>"
+"UTILITIESDESC:","delete RESULT.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->RoboCopy:Y@EXEDIR@\RoboCopy.va <~>RESULT_*.csv<~> <~>.<~> <~><<<CSRPATH>>><~> <~>5<~> <~>30<~> <~>N<~> <~>/MOV<~> <~>N<~>"
+"UTILITIESDESC:","submit to CSR"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Else:Y{ELSE}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:YRESULT.csv<SOF><{><}>LOT,HOLD_LOT,EMAIL,CCB_NUMBER,HOLD_NOTE,HOLDCATEGORY,FIFO<{><}><<<LOT>>>,Y,<<<DEMAIL>>>,<<<DCCB>>>,<<<DHNOTE>>>,<<<DHCAT>>>,Y"
+"UTILITIESDESC:","create RESULT.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rename:Y@EXEDIR@\SPFRename.va <~>RESULT.csv<~> <~>RESULT_<<<%username%>>>_MixingDetection_<TS>.csv<~>"
+"UTILITIESDESC:","rename and add timestamp"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Delete:Y@EXEDIR@\SPFDelete.bat <~>RESULT.csv<~> <~>N<~>"
+"UTILITIESDESC:","delete RESULT.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->RoboCopy:Y@EXEDIR@\RoboCopy.va <~>RESULT_*.csv<~> <~>.<~> <~>\\AZATSHFS.intel.com\AZATAnalysis$\MAOATM\Config\VF_POR_Cfg\ICM_PCS\<<<SFOLDER>>>\<<<CL_SITE>>>\HIST<~> <~>5<~> <~>30<~> <~>N<~> <~>/MOV<~> <~>N<~>"
+"UTILITIESDESC:","submit to HIST"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->HTML-Report:YYN30819"
+"UTILITIESDESC:","Create an HTML Report"
+"HTML-BEGIN",""
+"HTML-SCRIPT"
+"HTML-REPORT:MYREPORT1</@#;>MyReport1</@#;>"
+"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Type<\\>Key<\\>COL1<\\>COL2<\\>COL3<\\>COL4<\\>COL5<\\>COL6<\\>COL7<\\>COL8<\\>COL9<\\>COL10<\\>COL11<\\>COL12"
+"TYPE<\\>HTML<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"INPUT-FILE<\\>JBAantimixing.csv<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"OUTPUT-FILE<\\>SQLPathFinder.htm<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"CSS<\\>sqlpathfinder_style_1.css<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"COLSPAN<\\>@<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DRILLDOWN<\\>N<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DYNAMICSORT<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DYNAMICFILTER<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"ATTOPDRILLDOWN<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"NOPREPROCESS<\\>Y<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"COLUMN-DATA<\\><\\>vid<\\>lot<\\>lot_alien<\\>lot_ult<\\>ins<\\>ucnt<\\>ucnt_all<\\><\\><\\><\\><\\>"
+"COLUMN-HEADERS<\\><\\>Visual ID<\\>Lot@JBA<\\>Lot@Alien<\\>Lot@TCB (ULT)<\\>Qty@JBA (WS)<\\>Qty@XML (Unique)<\\>Qty@XML (Non-Unique)<\\><\\><\\><\\><\\>"
+"COLUMN-ALIGNMENT<\\><\\>middle-left<\\>middle-left<\\>middle-left<\\>middle-left<\\>middle-right<\\>middle-right<\\>middle-right<\\><\\><\\><\\><\\>"
+"COLUMN-FORMAT<\\><\\><\\><\\><\\><\\>d=n<\\>d=n<\\>d=n<\\><\\><\\><\\><\\>"
+"AT-BOT-OF-REPORT<\\><\\>EXP2:'<b>Total : </b>' || Count(Distinct [vid] )<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"HTML-REPORT-SPEC-END"
+"HTML-CREATE WINDOW:WIN2</@#;>0@@@EMAIL:<<<DEMAIL>>>@@@sqlpathfinder_style_1.css@@@E->Y@@@RR->NO@@@B->Y@@@EM-A->@@@EM-S->@@@SEC->Y@@@Text:1:white<:>black<:>N<:>N<:>N<:>intel clear<:>11<:>Left<:>Below is the list of unit(s) that suspected mixed with other lot.|MYREPORT1:1|Text:1:white<:>black<:>N<:>N<:>N<:>intel clear<:>11<:>Left<:><pre><strong>Configurations applied</strong><br>1. JBA:<br>&#009<-s-c->CSR enabled: <strong><span style=color:blue><<<DCSRJBA>>></span></strong><br>&#009<-s-c->MMS Signal Tracer enabled: <strong><span style=color:blue><<<DMSTJBA>>></span></strong><br>2. IAM:<br>&#009<-s-c->CSR enabled: <strong><span style=color:blue><<<DCSRIAM>>></span></strong><br>&#009<-s-c->MMS Signal Tracer enabled: <strong><span style=color:blue><<<DMSTIAM>>></span></strong></pre>|JMP-HTML:1:revision.htm@@@</@#;>Win2</@#;>JBA Mixing Alert: <<<LOT>>> (<<<PROD>>>; <<<ENTITY>>> @ <<<OUT_DATE>>>) - <<<CL_SITE>>> - <<<CL_SITE>>>"
+"HTML-END"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>VAR(<<<DMSTJBA>>>)<~> <~>EQS<~> <~>Y<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if MST is enabled"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:YALARM.csv<SOF><{><}>FACILITY,DATE,MODULE,SIGNALTYPE,ALARMTYPE,ENTITY,COMPONENTID,PRODUCT,SUBENTITY,LOT<{><}><<<FAC>>>,<<<CTIME>>>,BA,ICMPCS,MIXING,<<<ENTITY>>>,NA,<<<PROD>>>,NA,<<<LOT>>>"
+"UTILITIESDESC:","create ALARM.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rename:Y@EXEDIR@\SPFRename.va <~>ALARM.csv<~> <~>Alarm_ICMPCS_BA_Mixing_<TS>.csv<~>"
+"UTILITIESDESC:","rename and add timestamp"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Delete:Y@EXEDIR@\SPFDelete.bat <~>ALARM.csv<~> <~>N<~>"
+"UTILITIESDESC:","delete ALARM.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->RoboCopy:Y@EXEDIR@\RoboCopy.va <~>Alarm_*.csv<~> <~>.<~> <~><<<MMSPATH>>><~> <~>5<~> <~>30<~> <~>N<~> <~>/MOV<~> <~>N<~>"
+"UTILITIESDESC:","submit to MMS"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Else:Y{ELSE}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:YALARM.csv<SOF><{><}>FACILITY,DATE,MODULE,SIGNALTYPE,ALARMTYPE,ENTITY,COMPONENTID,PRODUCT,SUBENTITY,LOT<{><}><<<FAC>>>,<<<CTIME>>>,BA,ICMPCS,MIXING,<<<ENTITY>>>,NA,<<<PROD>>>,NA,<<<LOT>>>"
+"UTILITIESDESC:","create ALARM.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rename:Y@EXEDIR@\SPFRename.va <~>ALARM.csv<~> <~>Alarm_ICMPCS_BA_Mixing_<TS>.csv<~>"
+"UTILITIESDESC:","rename and add timestamp"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Delete:Y@EXEDIR@\SPFDelete.bat <~>ALARM.csv<~> <~>N<~>"
+"UTILITIESDESC:","delete ALARM.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->RoboCopy:Y@EXEDIR@\RoboCopy.va <~>Alarm_*.csv<~> <~>.<~> <~>\\AZATSHFS.intel.com\AZATAnalysis$\MAOATM\Config\VF_POR_Cfg\ICM_PCS\<<<SFOLDER>>>\<<<CL_SITE>>>\HIST<~> <~>5<~> <~>30<~> <~>N<~> <~>/MOV<~> <~>N<~>"
+"UTILITIESDESC:","submit to HIST"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Delete:Y@EXEDIR@\SPFDelete.bat <~>JBAantimixing.csv,<<<LOT>>>.xml<~> <~>N<~>"
+"UTILITIESDESC:","delete JBAantimixing.csv"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Else:Y{ELSE}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>VAR(<<<AGE>>>)<~> <~>GT<~> <~>5<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE when > 5 hr since move out"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Email:Y@EXEDIR@\SQLPathFinder_Email.va <~><~> <~>self<~> <~>JBA missing: <<<LOT>>> (<<<PROD>>>; <<<ENTITY>>> @ <<<OUT_DATE>>>; <<<AGE>>> hrs)<~> <~>revision.htm<~> <~><~> <~><~> <~><~> <~>N<~> <~><<<spf-email-type>>><~>"
+"UTILITIESDESC:","email when found raw data missing"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"a0.cam0","cam0","P","None","None","Row","c","","csv","SQL->a0.[cam0]","col2"
+"f(x)->SUBSTR( {cam0} ,CharIndex_v2('Production\',{cam0},1,1)+11, 8 ) || '__' || CharIndex_v2('\',{cam0},-1,1) || '__' || CharIndex_v2('\',{cam0},-1,2)","test","--","None","None","Row","C","***","","SQL->SUBSTR( {col2} ,CharIndex_v2('Production\',{col2},1,1)+11, 8 ) || '__' || CharIndex_v2('\',{col2},-1,1) || '__' || CharIndex_v2('\',{col2},-1,2)","col4"
+"a0.id","vid","Y","None","None","Row","c","","csv","SQL->a0.[id]","col1"
+"f(x)->'<<<LOT>>>'","lot","Y","None","None","Row","C","***","","SQL->'<<<LOT>>>'","col15"
+"f(x)->UPPER ( SUBSTR ( SUBSTR( {cam0} ,CharIndex_v2('Production\',{cam0},1,1)+11, CharIndex_v2('\',{cam0},1,6) - CharIndex_v2('\',{cam0},1,5) -1 ) , 1 , 8) )","lot_xml","Y","None","None","Row","C","***","csv","SQL->UPPER ( SUBSTR ( SUBSTR( {col2} ,CharIndex_v2('Production\',{col2},1,1)+11, CharIndex_v2('\',{col2},1,6) - CharIndex_v2('\',{col2},1,5) -1 ) , 1 , 8) )","col3"
+"a1.visual_id","visual_id","P","None","None","Row","c","A visual mark (laser read bar code) found on either unit (for PPV) or cartridge containing it (SYSTEST/OQA)","a_device_item","a1->di.visual_id","col9"
+"a1.lot","lot_alien","Y","None","None","Row","c","Workstream lot name. In Assembly/Test flow steps it is also known as TPO, APO or FPO","a_testing_session","a1->ats.lot","col8"
+"a2.lot","lot_ws","P","None","None","Row","c","Identifies a batch of wafers or units being processed in the factory.The basic format of the Lot number is: ?FYWWNNNN where F=fab code, Y=year, WW=workweek, NNNN= sequence, with the 9th or 10th characters as alphanumeric. In Fab, Etest and Sort, a quantity that has a wafer as an unit of measure and the physical form that passes through the factory. A lot starting the Fab process contains up to 25 wafers and can be split into child lots of varying sizes, and wafer losses can also occur. New lots are also created to split lots due to varying characteristics, such as speed or rework, for a portion of the lot. In some 200mm fabs production lots, the lot number uses a silicon vendor ID in the 8th character","f_lothist","a2->f0.lot","col12"
+"a2.oldqty1","ins","Y","None","None","Row","n","The quantity of original units in the lot after the last transaction was executed for the lot at the operation. ?Ultimately, it will equal the number of wafers (or units) in the lot to use when computing yield. Equals Out quantity + losses. ?In MES300, on the lot move out, this column should be set to equal newqty1 + lossqty1. That is because losses could be taken at any point while the lot is at the operation. Hence no losses may occur on the move out transaction but there were losses while the lot was at the operation.","f_lothist","a2->f0.oldqty1","col13"
+"a2.newqty1","outs","Y","None","None","Row","n","The number of wafers (or units) in the lot aftrer the last transaction was executed. Ultimately, it will equal the quantity of units in the lot when it is moved out of this operation.","f_lothist","a2->f0.newqty1","col14"
+"f(x)->COUNT (DISTINCT  {vid} ) OVER (PARTITION BY {lot} )","ucnt","Y","None","None","Row","N","***","@if@1","SQL->COUNT (DISTINCT  {col1} ) OVER (PARTITION BY {col3} )","col11"
+"f(x)->COUNT ( {vid} ) OVER (PARTITION BY {lot} )","ucnt_all","Y","None","None","Row","N","***","@if@1","SQL->COUNT ( {col1} ) OVER (PARTITION BY {col15} )","col16"
+"a3.txn_lot","childlot","P","None","None","Row","c","Identifies a batch of wafers or units being processed in the factory.","f_lottxnhist","a3->f5.lot","col18"
+"a3.txn_from_to_lot","parentlot","P","None","None","Row","c","For transactions that affect more than one lot, stores the other lot involved in the transaction. E.g., the child lot for a Split lot transaction or the parent lot for a Merge Lot transaction.","f_lottxnhist","a3->f5.from_to_lot","col19"
+"a4.visual_id","vid_ult","P","None","None","Row","c","Visual ID","aries_ube_unit_hist2","a4->u0.visualid","col20"
+"a4.lot","lot_ult","Y","None","None","Row","c","Lot Number. May have a name conflict from overlapping Pivoted attributes. If so, rename this field.","aries_ube_unit_hist2","a4->u0.lotnum","col21"
+"a4.operation","oper_ult","P","None","None","Row","c","Operation Number. May have a name conflict from overlapping Pivoted attributes. If so, rename this field.","aries_ube_unit_hist2","a4->u0.ws_operation","col22"
+"a5.lot","lot_ultv","Y","None","None","Row","c","Identifies a batch of wafers or units being processed in the factory.The basic format of the Lot number is: ?FYWWNNNN where F=fab code, Y=year, WW=workweek, NNNN= sequence, with the 9th or 10th characters as alphanumeric. In Fab, Etest and Sort, a quantity that has a wafer as an unit of measure and the physical form that passes through the factory. A lot starting the Fab process contains up to 25 wafers and can be split into child lots of varying sizes, and wafer losses can also occur. New lots are also created to split lots due to varying characteristics, such as speed or rework, for a portion of the lot. In some 200mm fabs production lots, the lot number uses a silicon vendor ID in the 8th character","f_lothist","a5->f0.lot","col23"
+"a5.operation","oper_ultv","P","None","None","Row","c","Identifies a manufacturing process step or a holding point","f_lothist","a5->f0.operation","col24"
+"a5.newqty1","outs_ultv","Y","None","None","Row","n","The number of wafers (or units) in the lot aftrer the last transaction was executed. Ultimately, it will equal the quantity of units in the lot when it is moved out of this operation.","f_lothist","a5->f0.newqty1","col25"
+"f(x)->CASE WHEN {outs_ultv} = 0 THEN 1 ELSE 0 END","vflag","P","None","None","Row","N","***","f_lothist","All->CASE WHEN {col25} = 0 THEN 1 ELSE 0 END","col26"
+"f(x)->CASE WHEN {vid} = 'UL01' THEN 0 WHEN {lot} = {lot_alien} THEN 0 WHEN {lot_alien} = {parentlot} THEN 0 WHEN {lot_alien} Is NULL AND {lot} = {lot_ult} THEN 0 ELSE 1 END","newtflag","P","None","None","Row","N","***","@if@1","All->CASE WHEN {col1} = 'UL01' THEN 0 WHEN {col15} = {col8} THEN 0 WHEN {col8} = {col19} THEN 0 WHEN {col8} Is NULL AND {col15} = {col21} THEN 0 ELSE 1 END","col27"
+"JOINGRID:"
+"AND","","Sqlite->a0.id                                                                                                    : SQL->{col1}","=","View->a1.visual_id                                                                                                    : a1->{col9}",""
+"AND","","Sqlite->f(x)->lot                                                                                                    : SQL->{col15}","=","View->a2.lot                                                                                                    : a2->{col12}",""
+"AND","","Sqlite->f(x)->lot                                                                                                    : SQL->{col15}","=","View->a3.txn_lot                                                                                                    : a3->{col18}",""
+"AND","","Sqlite->a0.id                                                                                                    : SQL->{col1}","=","View->a4.visual_id                                                                                                    : a4->{col20}",""
+"AND","","View->a4.lot                                                                                                    : a4->{col21}","=","View->a5.lot                                                                                                    : a5->{col23}",""
+"AND","","View->a4.operation                                                                                                    : a4->{col22}","=","View->a5.operation                                                                                                    : a5->{col24}",""
+"FILTERGRID:"
+"AND NOT","","f(x)->{lot}","Is Null","","","","cx","@IF@1","SQL->{col3}",""
+"AND NOT","","a0.status","=","'Reject'","","","c","csv","SQL->a0.[status]",""
+"-- AND","","a1.ctr_latest_flag","=","'Y'","","","c","a_all_component_testing_result","a1->ctr.latest_flag",""
+"AND","","a1.visual_id","In Temp"," {Sqlite (all)}^^^^^10 : Sqlite->a0.id","",".","c","a_device_item","a1->di.visual_id","SQL->{col1}"
+"AND","","a1.operation","In","'1204'</comma\>'1210'","","","c","a_testing_session","a1->ats.operation",""
+"AND NOT","","a1.tester_id","Like List","'URA%'</comma\>'NMS%'","","","c","a_testing_session","a1->ats.tester_id",""
+"AND","","a2.lot","=","'<<<LOT>>>'","",".","c","f_lothist","a2->f0.lot",""
+"AND","","a2.operation","=","'1440'","","","c","f_lothist","a2->f0.operation",""
+"AND","","a3.txn_lot","In Temp"," {Sqlite (all)} : Sqlite->lot","",".","c","f_lottxnhist","a3->f5.lot","SQL->{col15}"
+"AND","","a3.from_to","=","'F'","","","c","f_lottxnhist","a3->f5.from_to",""
+"AND","","a3.transaction","=","'SPLT'","","","c","f_lottxnhist","a3->f5.transaction",""
+"AND","","a4.operation","In","'1204'</comma\>'1210'","",".","c","aries_ube_unit_hist2","a4->u0.ws_operation",""
+"AND","","a4.visual_id","In Temp","{Sqlite (all)}^^^^^10 : Sqlite->a0.id","",".","c","aries_ube_unit_hist2","a4->u0.visualid","SQL->{col1}"
+"AND","","a5.lot","In Temp"," {View (a4)} : View->a4.lot","",".","c","f_lothist","a5->f0.lot","a4->{col21}"
+"AND","","a5.operation","In Temp"," {View (a4)} : View->a4.operation","","","c","f_lothist","a5->f0.operation","a4->{col22}"
+"AND","","f(x)->{vflag}","=","0","","","nx","@IF@1","All->{col26}",""
+"AND","","f(x)->{newtflag}","=","1","","","nx","@IF@2","All->{col27}",""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/END_EMBED
+/EMBED=VG2;CSR and History File Processing
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","No"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","No"
+"TERMINAL:","Yes"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:",""
+"EXCEL:",""
+"ROW:","No"
+"EMBED:","Y"
+"JOINDUCKDB:","N"
+"INCNESTUTIL:","N"
+"QUERYROWS:","0"
+"JOINROWS:","0"
+"FILTERROWS:","0"
+"COL_ID_COUNTER:","27"
+"CHART_COUNTER:","9"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","2"
+"CL_SITE","VN</@#;><<<CL_SITE>>>"
+"MARS","VN.[A90_PROD_21.].MARS</@#;>"
+"ARIES","VN.ARIES</@#;>"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rows-In-File:Y{ROWS-IN-FILE} <~>final_data.csv<~> <~>SIGNAL<~> <~>N<~> <~><~>"
+"UTILITIESDESC:","check if got signal"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>SIGNAL<~> <~>GT<~> <~>0<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if signal is found"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>VAR(<<<DCSR>>>)<~> <~>EQS<~> <~>Y<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if CSR is enabled"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->CSR-Input:YSPF$-INF,SPF$-OUTF,SPF$COLS-HOLD_LOT,SPF$COLS-LOT,SPF$COLS-EMAIL,SPF$COLS-CCB_NUMBER,SPF$COLS-HOLD_NOTE,SPF$COLS-FUTURE_OPERATION,SPF$COLS-PHQ,SPF$FILTCOL-1,SPF$FILTOPR-1,SPF$FILTVAL-1,SPF$TAB<{><}><~>final_data.csv<~>,<~><<<%username%>>>_ICMPCS_GE_Signal_CSR_CAM<~>,<~>Y<~>,<~>[lot]<~>,<~><<<dEmail>>><~>,<~><<<dCCB>>><~>,<~><<<dHNote>>><~>,<~><<<dHoldOperation>>><~>,<~><<<dPHQ>>><~>,<~><~>,<~><~>,<~><~>,<~>5<~>"
+"UTILITIESDESC:","Create ICM-PCS CSR Signal, pls remove whichever not applicable"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->RoboCopy:Y@EXEDIR@\RoboCopy.va <~>RESULT_*.csv<~> <~>.<~> <~><<<CSRPATH>>><~> <~>5<~> <~>30<~> <~>N<~> <~>/MOV<~> <~>N<~>"
+"UTILITIESDESC:","submit to CSR depository"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Chart-In-JMP:YYY"
+"UTILITIESDESC:","Create a JMP Program"
+"JMP-BEGIN",""
+"JMP-SCRIPT"
+"JMP-LOAD DATA</@#;>flagged_data.csv</@#;></@#;>YN</@#;>flagged_data_csv"
+"JMP-CHART:MYVARIABILITY4</@#;>MyVariability4</@#;>flagged_data_csv</@#;>variability.ini</@#;>14=:Name(<~>prodgroup3<~>);:Name(<~>link_id<~>);:Name(<~>entity<~>);:Name(<~>headnumber<~>);:Name(<~>subs<~>);:Name(<~>lot<~>);:Name(<~>test_end_date<~>)<\\>15=:Name(<~>x_offset<~>);:Name(<~>y_offset<~>);:Name(<~>theta<~>);:Name(<~>wcc<~>)<\\>17=:Name(<~>prodgroup3<~>)<\\>23=0<\\>25=0<\\>30=flagged;1;0<\\>31=N/A;Solid;Black;;;;;;;;;;;;;<\\>32=;;;;;;;;;;;;;;;<\\>33=570<\\>34=180<\\>35=Light Yellow<\\>36=2<\\>37=01<\\>57=HTM<\\>OPT0=0<\\>OPT1=0<\\>OPT2=1<\\>OPT3=0<\\>OPT4=0<\\>OPT5=0<\\>OPT6=0<\\>OPT7=0<\\>OPT8=0<\\>OPT9=0<\\>OPT10=0<\\>OPT11=0<\\>OPT12=0<\\>OPT13=0<\\>OPT14=0<\\>OPT15=0<\\>OPT16=0<\\>OPT17=0<\\>OPT18=0<\\>OPT19=0<\\>OPT20=0<\\>OPT21=0<\\>OPT22=0<\\>OPT23=0</@#;>Yes"
+"JMP-CREATE WINDOW:WIN7</@#;>0@@@chart.html@@@@@@MYVARIABILITY4@@@</@#;>Win7</@#;>CAM GE Triggering"
+"JMP-END"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->HTML-Report:YYN30819"
+"UTILITIESDESC:","sending notification"
+"HTML-BEGIN",""
+"HTML-SCRIPT"
+"HTML-REPORT:MYREPORT3</@#;>MyReport1</@#;>"
+"
+
+Type<\\>Key<\\>COL1<\\>COL2<\\>COL3<\\>COL4<\\>COL5<\\>COL6<\\>COL7<\\>COL8<\\>COL9<\\>COL10<\\>COL11<\\>COL12<\\>COL13"
+"TYPE<\\>HTML<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"INPUT-FILE<\\>final_data.csv<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"OUTPUT-FILE<\\>SQLPathFinder.htm<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"CSS<\\>sqlpathfinder_style_1.css<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"COLSPAN<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DRILLDOWN<\\>N<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DYNAMICSORT<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DYNAMICFILTER<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"ATTOPDRILLDOWN<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"NOPREPROCESS<\\>Y<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"AT-TOP-OF-REPORT<\\><\\>CAM GE TRIGGERING<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"COLUMN-DATA<\\><\\>ww<\\>link_id<\\>prodgroup3<\\>grouping<\\>lot<\\>test_end_date<\\>x_offset<\\>y_offset<\\>theta<\\>wcc<\\>sum_flagged<\\>qty<\\>outlier_pct"
+"COLUMN-HEADERS<\\><\\>Ww<\\>Link Id<\\>Prodgroup3<\\>Grouping<\\>Lot<\\>Test End Date<\\>X Offset<\\>Y Offset<\\>Theta<\\>Wcc<\\>Sum Flagged<\\>Qty<\\>Outlier Pct"
+"COLUMN-ALIGNMENT<\\><\\>middle-left<\\>middle-left<\\>middle-left<\\>middle-left<\\>middle-left<\\>middle-left<\\>middle-left<\\>middle-left<\\>middle-left<\\>middle-left<\\>middle-left<\\>middle-left<\\>middle-left"
+"COLUMN-FORMAT<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"HTML-REPORT-SPEC-END"
+"HTML-CREATE WINDOW:WIN2</@#;>0@@@EMAIL:<<<DEMAIL>>>@@@sqlpathfinder_style_1.css@@@E->Y@@@RR->NO@@@B->Y@@@EM-A->@@@EM-S->@@@SEC->Y@@@MYREPORT3:1|Text:1:white<:>black<:>N<:>N<:>N<:>Verdana<:>12<:>Center<:><a href=<~>https://content.sp2019.intel.com/sites/ATMICMPCS/RFCvault/67_ICMPCS_GE_Signal_CSR_CAM/ICMPCS_CAM_GE_DM_TriggerSignal.pdf<~>>RFC</a>|Text:1:white<:>black<:>N<:>N<:>N<:>intel clear<:>11<:>Left<:><strong>Configurations applied</strong><br>CSR enabled: <<<DCSR>>><br>ICMPCS MMS Workflow enabled: <<<DMWF>>><br>MMS Signal Tracer enabled: <<<DMST>>>|JMP-HTML:1:revision.htm|JMP-HTML:1:chart.html@@@</@#;>Win2</@#;>CAM GE TRIGGERING"
+"HTML-END"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rows-In-File:Y{ROWS-IN-FILE} <~>HISTERROR.txt<~> <~>HISTERR<~> <~>N<~> <~><~>"
+"UTILITIESDESC:","check existence of HISTERROR.txt"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>HISTERR<~> <~>LE<~> <~>0<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if HISTERROR.txt is not found"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Smart-Append:Y@EXEDIR@\SmartAppend.va <~>HIST.csv<~> <~>final_data.csv<~> <~><~> <~><~> <~><~> <~>N<~> <~>N<~> <~><~> <~>Version 3<~> <~><<<spf-hadoop-server>>><~> <~><~>"
+"UTILITIESDESC:","add new signal into HIST"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rename:Y@EXEDIR@\SPFRename.va <~>HIST.csv<~> <~>HIST.txt<~>"
+"UTILITIESDESC:","convert HIST.csv to HIST.txt"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->RoboCopy:Y@EXEDIR@\RoboCopy.va <~>HIST.txt<~> <~>.<~> <~><<<IREPOP>>>\<<<SFOLDER>>>\<<<CL_SITE>>>\HIST<~> <~>5<~> <~>30<~> <~>N<~> <~><~> <~>N<~>"
+"UTILITIESDESC:","upload HIST.txt"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"JOINGRID:"
+"FILTERGRID:"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/END_EMBED
+/EMBED=VG2;Workflow and MMS Processing
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","No"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","No"
+"TERMINAL:","Yes"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:",""
+"EXCEL:",""
+"ROW:","No"
+"EMBED:","Y"
+"JOINDUCKDB:","N"
+"INCNESTUTIL:","N"
+"QUERYROWS:","0"
+"JOINROWS:","0"
+"FILTERROWS:","0"
+"COL_ID_COUNTER:","27"
+"CHART_COUNTER:","3"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","2"
+"CL_SITE","VN</@#;><<<CL_SITE>>>"
+"MARS","VN.[A90_PROD_21.].MARS</@#;>"
+"ARIES","VN.ARIES</@#;>"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rows-In-File:Y{ROWS-IN-FILE} <~>final_data.csv<~> <~>SIGNAL<~> <~>N<~> <~><~>"
+"UTILITIESDESC:","check if got signal"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>SIGNAL<~> <~>GT<~> <~>0<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if signal is found"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>VAR(<<<DMWF>>>)<~> <~>EQS<~> <~>Y<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","TRUE if ICMPCS MMS Workflow is enabled"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->MMSWF-Input:YSPF$-INF,SPF$COLS-MODULE,SPF$COLS-SIGNALTYPE,SPF$COLS-ALARMTYPE,SPF$COLS-EMAIL,SPF$COLS-HOLD_LOT,SPF$COLS-AUTO_CONTAIN,SPF$COLS-PRODGROUP3,SPF$COLS-ENTITY,SPF$COLS-COMPONENT_ID,SPF$COLS-DEFECT_MODE,SPF$COLS-SUB_ENTITY_1,SPF$COLS-SUB_ENTITY_2,SPF$COLS-SUB_ENTITY_3,SPF$COLS-DEFECT_SIDE,SPF$COLS-LOT_OWNER,SPF$COLS-IMPACT_LOT_VI,SPF$COLS-IMPACT_VIDS,SPF$TAB<{><}><~>final_data.csv<~>,<~>CAM<~>,<~>ICMPCS<~>,<~>CAM_GE<~>,<~>EMAIL:<<<DEMAIL>>><~>,<~>N<~>,<~>N<~>,<~>[prodgroup3]<~>,<~>[link_id]<~>,<~><~>,<~><~>,<~><~>,<~><~>,<~><~>,<~><~>,<~><~>,<~>[lot]<~>,<~><~>,<~>1<~><{><}>"
+"UTILITIESDESC:","Create ICM-PCS MMS Workflow"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->RoboCopy:Y@EXEDIR@\RoboCopy.va <~>*_output.pickle.csv<~> <~>.<~> <~><<<MIPPATH>>><~> <~>5<~> <~>30<~> <~>N<~> <~>/MOV<~> <~>N<~>"
+"UTILITIESDESC:","submit to ICMPCS MMS Workflow depository"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"JOINGRID:"
+"FILTERGRID:"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/END_EMBED
+/EMBED=VG2;lot_list
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","Yes"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","Yes"
+"TERMINAL:","Yes"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:",""
+"EXCEL:","cam_lot_list.csv"
+"ROW:","No"
+"EMBED:","Y"
+"JOINDUCKDB:","N"
+"INCNESTUTIL:","N"
+"QUERYROWS:","16"
+"JOINROWS:","1"
+"FILTERROWS:","15"
+"COL_ID_COUNTER:","32"
+"CHART_COUNTER:","0"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","2"
+"CL_SITE","KM</@#;><<<CL_SITE>>>"
+"STUCK","5</@#;><<<STUCK>>>"
+"LIMIT","0.25</@#;><<<LIMIT>>>"
+"<---- New Query ---->","2:0:a0"
+"TABLEGRID:","1"
+"","F_Lot_History_v3",""
+"MARSNODE:","<<<MARS>>>"
+"ARIESNODE:","<<<ARIES>>>"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","Default"
+"MARSSCHEMA:","@[]@"
+"DATABASETYPE:","Oracle"
+"SINGLENODE:","<<<MARS>>>"
+"SINGLESCHEMA:","@[]@"
+"PROMPT-TEXT:","Fetching MARS Data"
+"DISTINCT:","Yes"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"PARALLEL:","0"
+"IGNOREINCSUM:","No"
+"FIRST_ROWS:","No"
+"ORDERED:","No"
+"OTHER-HINT:","No"
+"<---- New Query ---->","2:2:a1"
+"TABLEGRID:","1"
+"","AT_Metrology",""
+"MARSNODE:","<<<MARS>>>"
+"ARIESNODE:","<<<ARIES>>>"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","Default"
+"MARSSCHEMA:","@[]@"
+"DATABASETYPE:","Oracle"
+"SINGLENODE:","<<<ARIES>>>"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Fetching ARIES Data"
+"DISTINCT:","Yes"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"PARALLEL:","0"
+"IGNOREINCSUM:","No"
+"FIRST_ROWS:","No"
+"ORDERED:","No"
+"OTHER-HINT:","No"
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"a0.site_work_week","ww","Y","None","None","Row","n","The facility work week for the given interval in the format yyyyww.  For example: 199745.","f_calendar","a0->c0.ww","col27"
+"a1.link_id","link","Y","None","None","Row","c","In Assembly/Test, the Link ID","a_testing_session","a1->ats.link_id","col25"
+"a0.prodgroup3","prod","Y","None","None","Row","c","Product Classification column.","f_product","a0->p.prodgroup3","col3"
+"a0.attribute_value","subs","Y","None","None","Row","x","The value of the lot attribute","f_lotattribute","a0->f12.attribute_value","col6"
+"a0.lot","lot","Y","None","None","Row","c","Identifies a batch of wafers or units being processed in the factory.The basic format of the Lot number is: ?FYWWNNNN where F=fab code, Y=year, WW=workweek, NNNN= sequence, with the 9th or 10th characters as alphanumeric. In Fab, Etest and Sort, a quantity that has a wafer as an unit of measure and the physical form that passes through the factory. A lot starting the Fab process contains up to 25 wafers and can be split into child lots of varying sizes, and wafer losses can also occur. New lots are also created to split lots due to varying characteristics, such as speed or rework, for a portion of the lot. In some 200mm fabs production lots, the lot number uses a silicon vendor ID in the 8th character","f_lothist","a0->f0.lot","col1"
+"a0.newqty1","qty","Y","None","None","Row","n","The number of wafers (or units) in the lot aftrer the last transaction was executed. Ultimately, it will equal the quantity of units in the lot when it is moved out of this operation.","f_lothist","a0->f0.newqty1","col7"
+"a0.out_date","out_date","Y","None","None","Row","d","The date the lot moved out of the operation. If the lot has not moved out, the value will be NULL. This column is used in date indices instead of Last_Action_Date as Last_Action_Date changes for every transaction for the lot at the operation.","f_lothist","a0->f0.out_date","col2"
+"a0.attribute_name","attribute_name","P","None","None","Row","c","Lot Attribute Name (e.g., GROUP)","f_lotattribute","a0->(SELECT alpha1 as attribute_name FROM @MARSSCHEMA@F_GTSData@MARSNODE@ WHERE facility IN ('IMORA','IMO','COMETS') AND table_name = 'COM$ATTR' AND key1 = 'LOT' AND src_erase_date IS NULL AND key2_numeric = f12.attribute_number AND rownum <= 1)","col5"
+"a0.owner","owner","P","None","None","Row","c","Identifies the type of lot. E.g., PROD and MW","f_lothist","a0->f0.owner","col14"
+"a1.lot","lot_1","P","None","None","Row","c","Workstream lot name. In Assembly/Test flow steps it is also known as TPO, APO or FPO","a_testing_session","a1->ats.lot","col24"
+"a1.program_name","program_name","P","None","None","Row","c","Name of the test program run on a component tester","a_testing_session","a1->ats.program_name","col26"
+"f(a0)->SYSDATE","current_time","Y","None","None","Row","D","***","@if@1","a0->SYSDATE","col28"
+"f(x)->{link} ||'_'|| {prod} ||'_'|| {subs}","LOT_GROUP","Y","Asc","None","Row","C","***","@if@2","All->{col25} ||'_'|| {col3} ||'_'|| {col6}","col29"
+"f(x)->SPF_FN$Date_Diff( {current_time} , {out_date} )*24","time_gap","Y:2","None","None","Row","N","***","f_lothist","All->SPF_FN$Date_Diff( {col28} , {col2} )*24","col30"
+"f(x)->RANK () OVER (PARTITION BY  {lot_group}  ORDER BY  {out_date}  DESC)","SEQ","Y","None","None","Row","N","***","@if@3","All->RANK () OVER (PARTITION BY  {col29}  ORDER BY  {col2}  DESC)","col31"
+"f(x)->MIN ( {time_gap} ) OVER (PARTITION BY  {lot_group}  )","MIN_TIME","P","None","None","Row","N","***","@if@3","All->MIN ( {col30} ) OVER (PARTITION BY  {col29}  )","col32"
+"JOINGRID:"
+"","","View->a0.lot                                                                                                    : a0->{col1}","=","View->a1.lot                                                                                                    : a1->{col24}",""
+"FILTERGRID:"
+"AND","","a0.operation","=","'1210'","","","c","f_lothist","a0->f0.operation",""
+"AND","","a0.last_pass","=","'Y'","","","c","f_lothist","a0->f0.last_pass",""
+"AND","","a0.movedout","=","'Y'","","","c","f_lothist","a0->f0.movedout",""
+"AND","","a0.owner","=","'PROD'","","","c","f_lothist","a0->f0.owner",""
+"AND","","a0.out_date","Between","TRUNC(SYSDATE) - 116
+                     + INTERVAL '05:06:17' HOUR TO SECOND","",".","d","f_lothist","a0->f0.out_date","TRUNC(SYSDATE) - 116
+                     + INTERVAL '07:06:17' HOUR TO SECOND"
+"AND","","f(a0)->{attribute_name}","=","'SUB VEND ID'","","","cx","@IF@1","a0->{col5}",""
+"AND","","a1.operation","=","'1210'","","","c","a_testing_session","a1->ats.operation",""
+"AND","","a1.lot","In Temp"," {View (a0)} : View->a0.lot","",".","c","a_testing_session","a1->ats.lot","a0->{col1}"
+"AND","","a1.session_latest_flag","=","'Y'","","","c","a_testing_session","a1->ats.latest_flag",""
+"AND","","a1.valid_flag","=","'Y'","","","c","a_testing_session","a1->ats.valid_flag",""
+"AND","","a1.program_name","=","'DPMS_PREBTU'","","","c","a_testing_session","a1->ats.program_name",""
+"-- AND","","a1.lot","In Group",".\HIST.csv:1. LOT","",".","c","a_testing_session","a1->ats.lot",""
+"AND","","f(x)->{lot_group}","Is Not Null","","","","cx","@IF@3","All->{col29}",""
+"-- AND","","f(x)->{min_time}","<=","1.5","","","nx","@IF@4","All->{col32}",""
+"AND","","f(x)->{seq}","<=","30","","","nx","@IF@4","All->{col31}",""
+
+
+/END_EMBED
+/EMBED=VG2;unit_level_data
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","Yes"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","Yes"
+"TERMINAL:","Yes"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:",""
+"EXCEL:","xdata.csv"
+"ROW:","No"
+"EMBED:","Y"
+"JOINDUCKDB:","N"
+"INCNESTUTIL:","N"
+"QUERYROWS:","23"
+"JOINROWS:","3"
+"FILTERROWS:","19"
+"COL_ID_COUNTER:","29"
+"CHART_COUNTER:","0"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","2"
+"CL_SITE","KM</@#;><<<CL_SITE>>>"
+"STUCK","5</@#;><<<STUCK>>>"
+"LIMIT","0.25</@#;><<<LIMIT>>>"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Delete:Y@EXEDIR@\SPFDelete.bat <~>data.csv<~> <~>N<~>"
+"UTILITIESDESC:","Delete Files"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Run-Loop:Y{RUN-LOOP} <~>cam_lot_list.csv<~> <~>temp_cam_lot_list.csv<~> <~>1<~> <~>N<~> <~>0<~>"
+"UTILITIESDESC:","Loop through a File"
+"<---- New Query ---->","2:2:a0"
+"TABLEGRID:","1"
+"","AT_Metrology",""
+"MARSNODE:","Default"
+"ARIESNODE:","<<<ARIES>>>"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","Default"
+"MARSSCHEMA:","Default"
+"DATABASETYPE:","Oracle"
+"SINGLENODE:","<<<ARIES>>>"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Fetching ARIES Data"
+"DISTINCT:","Yes"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"PARALLEL:","0"
+"IGNOREINCSUM:","No"
+"FIRST_ROWS:","No"
+"ORDERED:","No"
+"OTHER-HINT:","No"
+"<---- New Query ---->","2:2:a2"
+"TABLEGRID:","1"
+"","AT_Metrology",""
+"MARSNODE:","Default"
+"ARIESNODE:","<<<ARIES>>>"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","Default"
+"MARSSCHEMA:","Default"
+"DATABASETYPE:","Oracle"
+"SINGLENODE:","<<<ARIES>>>"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Fetching ARIES Data"
+"DISTINCT:","Yes"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"PARALLEL:","0"
+"IGNOREINCSUM:","No"
+"FIRST_ROWS:","No"
+"ORDERED:","No"
+"OTHER-HINT:","No"
+"<---- New Query ---->","2:2:a1"
+"TABLEGRID:","1"
+"","ULT_AT",""
+"MARSNODE:","Default"
+"ARIESNODE:","<<<ARIES>>>"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","Default"
+"MARSSCHEMA:","Default"
+"DATABASETYPE:","Oracle"
+"SINGLENODE:","<<<ARIES>>>"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Fetching ARIES Data"
+"DISTINCT:","Yes"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"PARALLEL:","0"
+"IGNOREINCSUM:","No"
+"FIRST_ROWS:","No"
+"ORDERED:","No"
+"OTHER-HINT:","No"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Smart-Append:Y@EXEDIR@\SmartAppend.va <~>data.csv<~> <~>xdata.csv<~> <~><~> <~><~> <~><~> <~>N<~> <~>N<~> <~><~> <~>Version 3<~> <~><<<spf-hadoop-server>>><~> <~><~>"
+"UTILITIESDESC:","Smart-Append Data"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-Loop:Y{END-LOOP}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"a0.lao_start_ww","ww","Y","None","None","Row","n","Intel workweek in which testing of the lot at the particular operation started. This value is originally stored in A_LOT_AT_OPERATION, and then redundantly copied in many tables that refer to a lot at an operation (directly in indirectly). Thus, all test results for a particular lot at an operation will have the same value for this workweek. This column value is also used for partitioning tables. Format is YYYYWW","a_testing_session","a0->ats.lao_start_ww","col23"
+"a0.link_id","link_id","Y","None","None","Row","c","In Assembly/Test, the Link ID","a_testing_session","a0->ats.link_id","col1"
+"a0.prodgroup3","prodgroup3","Y","None","None","Row","c","Product Classification column.","a_mars_product","a0->mp.prodgroup3","col2"
+"a0.program_name","program_name","Y","None","None","Row","c","Name of the test program run on a component tester","a_testing_session","a0->ats.program_name","col3"
+"a0.test_end_date","test_end_date","Y","None","None","Row","d","This date includes a date and the time","a_testing_session","a0->ats.test_end_date_time","col4"
+"a0.tester_id","tester_id","Y","None","None","Row","c","Name of the tester that tested the lot","a_testing_session","a0->ats.tester_id","col5"
+"a0.lot","lot","Y","None","None","Row","c","Workstream lot name. In Assembly/Test flow steps it is also known as TPO, APO or FPO","a_testing_session","a0->ats.lot","col6"
+"a0.visual_id","visual_id","Y","None","None","Row","c","A visual mark (laser read bar code) found on either unit (for PPV) or cartridge containing it (SYSTEST/OQA)","a_device_item","a0->di.visual_id","col7"
+"a0.complevel_1","complevel_1","Y","None","None","Row","c","This column stores the name of the 1st level component of a device . Ex. Resistance, transistor etc. A device may or may not have a 1st level component. No other attribute of this object is stored in the database","a_all_component_testing_result","a0->ctr.complevel_1","col8"
+"a0.complevel_2","complevel_2","Y","None","None","Row","c","This column stores the name of the 2nd  level component of a device . Ex. Pads on an interposer,  etc. A device may or may not have a 2nd  level component. No other attribute of this object is stored in the database","a_all_component_testing_result","a0->ctr.complevel_2","col9"
+"a0.test_name","test_name","Y","None","None","Header","c","Name of the test to be performed on the device","a_test","a0->t.test_name","col10"
+"a0.all_value","all_value","Y","None","Max","Value","c","Stores the string or numeric value depending on which is filled in","a_all_component_testing_result","a0->CASE WHEN ctr.string_value IS NULL THEN to_char(ctr.numeric_result) ELSE ctr.string_value END","col11"
+"a0.tray_or_carrier_id","tray_or_carrier_id","Y","None","None","Row","c","Identification of a tray within specific testing session.","a_device_testing","a0->dt.testing_session_tray_id","col12"
+"a0.carrier_x","carrier_x","Y","None","None","Row","n","X or Y coordinate of a die location on a carrier","a_device_testing","a0->dt.carrier_x","col13"
+"a0.carrier_y","carrier_y","Y","None","None","Row","n","X or Y coordinate of a die location on a carrier","a_device_testing","a0->dt.carrier_y","col19"
+"a1.visual_id","visual_id_1","P","None","None","Row","c","Visual ID","aries_ube_unit_hist2","a1->u0.visualid","col20"
+"a1.attribute_name","attribute_name","P","None","None","Row","c","Attribute Name. E.g., REEL_ID","aries_ube_unit_hist2_attr","a1->u1.attr_name","col21"
+"a1.attribute_value","subs","Y","None","None","Row","c","Attribute Value. E.g., ATD200008255","aries_ube_unit_hist2_attr","a1->u1.attr_value","col22"
+"a2.test_name","test_name_1","P","None","None","Header","c","Name of the test to be performed on the device","a_test","a2->t.test_name","col24"
+"a2.complevel_1","complevel_1_1","P","None","None","Row","c","This column stores the name of the 1st level component of a device . Ex. Resistance, transistor etc. A device may or may not have a 1st level component. No other attribute of this object is stored in the database","a_all_component_testing_result","a2->ctr.complevel_1","col25"
+"a2.all_value","all_value_1","Y","None","Max","Value","c","Stores the string or numeric value depending on which is filled in","a_all_component_testing_result","a2->CASE WHEN ctr.string_value IS NULL THEN to_char(ctr.numeric_result) ELSE ctr.string_value END","col26"
+"a2.visual_id","visual_id_2","P","None","None","Row","c","A visual mark (laser read bar code) found on either unit (for PPV) or cartridge containing it (SYSTEST/OQA)","a_device_item","a2->di.visual_id","col27"
+"a2.tester_id","entity","Y","None","None","Row","c","Name of the tester that tested the lot","a_testing_session","a2->ats.tester_id","col29"
+"JOINGRID:"
+"AND","","View->a0.visual_id                                                                                                    : a0->{col7}","=","View->a1.visual_id                                                                                                    : a1->{col20}",""
+"AND","","View->a0.visual_id                                                                                                    : a0->{col7}","=","View->a2.visual_id                                                                                                    : a2->{col27}",""
+"AND","","View->a0.complevel_1                                                                                                    : a0->{col8}","=","View->a2.complevel_1                                                                                                    : a2->{col25}",""
+"FILTERGRID:"
+"AND","","a0.operation","=","'1210'","","","c","a_testing_session","a0->ats.operation",""
+"AND","","a0.session_latest_flag","=","'Y'","","","c","a_testing_session","a0->ats.latest_flag",""
+"AND","","a0.valid_flag","=","'Y'","","","c","a_testing_session","a0->ats.valid_flag",""
+"AND","","a0.ctr_latest_flag","=","'Y'","","","c","a_all_component_testing_result","a0->ctr.latest_flag",""
+"-- AND","","a0.within_lao_latest_flag","=","'Y'","","","c","a_device_testing","a0->dt.within_lao_latest_flag",""
+"-- AND","","a0.within_lao_latest_flag","=","'Y'","","","c","a_device_testing","a0->dt.within_lao_latest_flag",""
+"AND","","a0.dt_latest_flag","=","'Y'","","","c","a_device_testing","a0->dt.latest_flag",""
+"AND","","a0.complevel_1","Like","'U%'","","","c","a_all_component_testing_result","a0->ctr.complevel_1",""
+"AND","","a0.lot","In Group",".\temp_cam_lot_list.csv:5. LOT","",".","c","a_testing_session","a0->ats.lot",""
+"AND","","a1.operation","=","'0614'","",".","c","aries_ube_unit_hist2","a1->u0.ws_operation",""
+"AND","","a1.visual_id","In Temp","{View (a0)}^^^^^500 : View->a0.visual_id","",".","c","aries_ube_unit_hist2","a1->u0.visualid","a0->{col7}"
+"AND","","a1.attribute_name","=","'VENDOR_ID'","","","c","aries_ube_unit_hist2_attr","a1->u1.attr_name",""
+"AND","","a0.program_name","=","'DPMS_PREBTU'","","","c","a_testing_session","a0->ats.program_name",""
+"-- AND","","a0.visual_id","Is Not Null","","",".","c","a_device_item","a0->di.visual_id",""
+"-- AND","","a2.ctr_latest_flag","=","'Y'","","","c","a_all_component_testing_result","a2->ctr.latest_flag",""
+"AND","","a2.lot","In Temp","{View (a0)}^^^^^100 : View->a0.lot","",".","c","a_testing_session","a2->ats.lot","a0->{col6}"
+"AND","","a2.program_name","Like","'PNP%'","","","c","a_testing_session","a2->ats.program_name",""
+"AND","","a2.complevel_1","Like","'U%'","","","c","a_all_component_testing_result","a2->ctr.complevel_1",""
+"-- AND","","a2.visual_id","=","'76JF780500026'","",".","c","a_device_item","a2->di.visual_id",""
+
+
+
+/END_EMBED
+/EMBED=VG2;final_data
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","Yes"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","No"
+"TERMINAL:","Yes"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:",""
+"EXCEL:","final_data.csv"
+"ROW:","No"
+"EMBED:","Y"
+"JOINDUCKDB:","N"
+"INCNESTUTIL:","N"
+"QUERYROWS:","18"
+"JOINROWS:","1"
+"FILTERROWS:","2"
+"COL_ID_COUNTER:","19"
+"CHART_COUNTER:","0"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","2"
+"CL_SITE","KM</@#;><<<CL_SITE>>>"
+"STUCK","5</@#;><<<STUCK>>>"
+"LIMIT","0.25</@#;><<<LIMIT>>>"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->RoboCopy:Y@EXEDIR@\RoboCopy.va <~>prod_hold.csv<~> <~>\\AZatshfs.intel.com\AZatanalysis$\MAOATM\Config\VF_POR_Cfg\ICM_PCS\ICMPCS_GE_Signal_CSR_CAM<~> <~>.\<~> <~>5<~> <~>5<~> <~>N<~> <~><~> <~>N<~>"
+"UTILITIESDESC:","Robocopy Files/Folders"
+"<---- New Query ---->","1:5:SQL"
+"TABLEGRID:","2"
+"","prod_hold.csv a1",""
+"","flagged_data.csv a0",""
+"MARSNODE:","Default"
+"ARIESNODE:","Default"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","Default"
+"DATABASETYPE:","SQLite"
+"SINGLENODE:","TEXT (SQLite)"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Fetching Text (SQLite) Data"
+"DISTINCT:","Yes"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"PREPROCESS_CSV:","No"
+"NOHDRS:","No"
+"CARTESIAN:","No"
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"a0.ww","ww","Y","None","None","Row","c","","csv","SQL->a0.[ww]","col1"
+"a0.link_id","link_id","Y","None","None","Row","c","","csv","SQL->a0.[link_id]","col2"
+"a0.prodgroup3","prodgroup3","Y","None","None","Row","c","","csv","SQL->a0.[prodgroup3]","col3"
+"a0.grouping","grouping","Y","None","None","Row","c","","csv","SQL->a0.[grouping]","col15"
+"a0.lot","lot","Y","None","None","Row","c","","csv","SQL->a0.[lot]","col4"
+"a0.test_end_date","test_end_date","Y","None","None","Row","c","","csv","SQL->a0.[test_end_date]","col5"
+"f(x)->x_flagged","x_flagged","P","None","None","Row","f","x_flagged","csv","SQL->CASE WHEN a0.[x_flagged] = '' THEN NULL ELSE CAST (a0.[x_flagged] AS REAL) END","col7"
+"f(x)->y_flagged","y_flagged","P","None","None","Row","f","y_flagged","csv","SQL->CASE WHEN a0.[y_flagged] = '' THEN NULL ELSE CAST (a0.[y_flagged] AS REAL) END","col8"
+"f(x)->wcc_flagged","wcc_flagged","P","None","None","Row","f","wcc_flagged","csv","SQL->CASE WHEN a0.[wcc_flagged] = '' THEN NULL ELSE CAST (a0.[wcc_flagged] AS REAL) END","col9"
+"f(x)->theta_flagged","theta_flagged","P","None","None","Row","f","theta_flagged","csv","SQL->CASE WHEN a0.[theta_flagged] = '' THEN NULL ELSE CAST (a0.[theta_flagged] AS REAL) END","col10"
+"f(x)->SUM ( {x_flagged} ) OVER (PARTITION BY  {grouping} , {lot} )","x_offset","Y","None","None","Row","N","***","@if@1","SQL->SUM ( {col7} ) OVER (PARTITION BY  {col15} , {col4} )","col14"
+"f(x)->SUM (  {y_flagged} ) OVER (PARTITION BY  {grouping} , {lot} )","y_offset","Y","None","None","Row","N","***","@if@1","SQL->SUM (  {col8} ) OVER (PARTITION BY  {col15} , {col4} )","col16"
+"f(x)->SUM (  {theta_flagged} ) OVER (PARTITION BY  {grouping} , {lot} )","theta","Y","None","None","Row","N","***","@if@1","SQL->SUM (  {col10} ) OVER (PARTITION BY  {col15} , {col4} )","col17"
+"f(x)->SUM (  {wcc_flagged} ) OVER (PARTITION BY  {grouping} , {lot} )","wcc","Y","None","None","Row","N","***","@if@1","SQL->SUM (  {col9} ) OVER (PARTITION BY  {col15} , {col4} )","col18"
+"f(x)->sum_flagged","sum_flagged","Y","None","None","Row","f","sum_flagged","csv","SQL->CASE WHEN a0.[sum_flagged] = '' THEN NULL ELSE CAST (a0.[sum_flagged] AS REAL) END","col11"
+"f(x)->qty","qty","Y","None","None","Row","f","qty","csv","SQL->CASE WHEN a0.[qty] = '' THEN NULL ELSE CAST (a0.[qty] AS REAL) END","col12"
+"f(x)->outlier_pct","outlier_pct","Y","None","None","Row","f","outlier_pct","csv","SQL->CASE WHEN a0.[outlier_pct] = '' THEN NULL ELSE CAST (a0.[outlier_pct] AS REAL) END","col13"
+"a1.product","product","P","None","None","Row","c","","csv","SQL->a1.[product]","col19"
+"JOINGRID:"
+"AND","","Sqlite->a0.prodgroup3                                                                                                    : SQL->{col3}","=","Sqlite->a1.product                                                                                                    : SQL->{col19}",""
+"FILTERGRID:"
+"AND","","f(x)->outlier_pct",">","<<<LIMIT>>>","","","f","csv","SQL->CASE WHEN a0.[outlier_pct] = '' THEN NULL ELSE CAST (a0.[outlier_pct] AS REAL) END",""
+"-- AND NOT","","a0.lot","In Group",".\HIST.csv:5. lot","","","c","csv","SQL->a0.[lot]",""
+
+
+
+
+
+
+
+
+
+
+
+
+
+/END_EMBED
+/EMBED=VG2;analysis
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","No"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","No"
+"TERMINAL:","Yes"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:",""
+"EXCEL:","flagged_data.csv"
+"ROW:","No"
+"EMBED:","Y"
+"JOINDUCKDB:","N"
+"INCNESTUTIL:","N"
+"QUERYROWS:","47"
+"JOINROWS:","0"
+"FILTERROWS:","2"
+"COL_ID_COUNTER:","68"
+"CHART_COUNTER:","0"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","0"
+"CL_SITE","KM</@#;><<<CL_SITE>>>"
+"<---- New Query ---->","1:5:SQL"
+"TABLEGRID:","1"
+"","data.csv a0",""
+"MARSNODE:","Default"
+"ARIESNODE:","Default"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","Default"
+"DATABASETYPE:","SQLite"
+"SINGLENODE:","TEXT (SQLite)"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Fetching Text (SQLite) Data"
+"DISTINCT:","No"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"PREPROCESS_CSV:","No"
+"NOHDRS:","No"
+"CARTESIAN:","No"
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"f(x)->3.5","out_limit","P","None","None","Row","F","***","","SQL->3.5","col47"
+"f(x)-><<<LIMIT>>>","out_ratio","Y","None","None","Row","N","***","","SQL-><<<LIMIT>>>","col67"
+"a0.ww","ww","Y","None","None","Row","c","","csv","SQL->a0.[ww]","col1"
+"a0.link_id","link_id","Y","None","None","Row","c","","csv","SQL->a0.[link_id]","col2"
+"a0.prodgroup3","prodgroup3","Y","None","None","Row","c","","csv","SQL->a0.[prodgroup3]","col3"
+"a0.program_name","program_name","Y","None","None","Row","c","","csv","SQL->a0.[program_name]","col4"
+"a0.test_end_date","test_end_date","Y","None","None","Row","c","","csv","SQL->a0.[test_end_date]","col5"
+"a0.tester_id","tester_id","Y","None","None","Row","c","","csv","SQL->a0.[tester_id]","col6"
+"a0.lot","lot","Y","None","None","Row","c","","csv","SQL->a0.[lot]","col7"
+"a0.visual_id","visual_id","Y","None","None","Row","c","","csv","SQL->a0.[visual_id]","col8"
+"a0.complevel_1","complevel_1","Y","None","None","Row","c","","csv","SQL->a0.[complevel_1]","col9"
+"a0.complevel_2","complevel_2","Y","None","None","Row","c","","csv","SQL->a0.[complevel_2]","col10"
+"f(x)->theta","theta","Y","None","None","Row","f","theta","csv","SQL->CASE WHEN a0.[theta] = '' THEN NULL ELSE CAST (a0.[theta] AS REAL) END","col11"
+"f(x)->wcc","wcc","Y","None","None","Row","f","wcc","csv","SQL->CASE WHEN a0.[wcc] = '' THEN NULL ELSE CAST (a0.[wcc] AS REAL) END","col12"
+"f(x)->x_offset","x_offset","Y","None","None","Row","f","x_offset","csv","SQL->CASE WHEN a0.[x offset] = '' THEN NULL ELSE CAST (a0.[x offset] AS REAL) END","col13"
+"f(x)->y_offset","y_offset","Y","None","None","Row","f","y_offset","csv","SQL->CASE WHEN a0.[y offset] = '' THEN NULL ELSE CAST (a0.[y offset] AS REAL) END","col14"
+"a0.tray_or_carrier_id","tray_or_carrier_id","Y","None","None","Row","c","","csv","SQL->a0.[tray_or_carrier_id]","col15"
+"a0.carrier_x","carrier_x","Y","None","None","Row","c","","csv","SQL->a0.[carrier_x]","col16"
+"a0.carrier_y","carrier_y","Y","None","None","Row","c","","csv","SQL->a0.[carrier_y]","col17"
+"a0.subs","subs","Y","None","None","Row","c","","csv","SQL->a0.[subs]","col18"
+"f(x)->{link_id}||'_'|| {prodgroup3} ||'_'|| {subs} ||'_'|| {entity} ||'_'|| {headnumber} ||'_'|| {complevel_1}","grouping","Y","None","None","Row","C","***","csv","SQL->{col2}||'_'|| {col3} ||'_'|| {col18} ||'_'|| {col37} ||'_'|| {col25} ||'_'|| {col9}","col38"
+"a0.headnumber","headnumber","Y","None","None","Row","c","","csv","SQL->a0.[headnumber]","col25"
+"a0.entity","entity","Y","None","None","Row","c","","csv","SQL->a0.[entity]","col37"
+"f(x)->P25 ( {x_offset} ) OVER (PARTITION BY  {grouping}  )","x_25","Y","None","None","Row","N","***","@if@2","SQL->P25 ( {col13} ) OVER (PARTITION BY  {col38}  )","col39"
+"f(x)->P75 ( {x_offset} ) OVER (PARTITION BY  {grouping}  )","x_75","Y","None","None","Row","N","***","@if@2","SQL->P75 ( {col13} ) OVER (PARTITION BY  {col38}  )","col40"
+"f(x)->P25 (  {y_offset} ) OVER (PARTITION BY  {grouping}  )","y_25","Y","None","None","Row","N","***","@if@2","SQL->P25 (  {col14} ) OVER (PARTITION BY  {col38}  )","col41"
+"f(x)->P75 (  {y_offset} ) OVER (PARTITION BY  {grouping}  )","y_75","Y","None","None","Row","N","***","@if@2","SQL->P75 (  {col14} ) OVER (PARTITION BY  {col38}  )","col42"
+"f(x)->P25 (  {wcc} ) OVER (PARTITION BY  {grouping}  )","wcc_25","Y","None","None","Row","N","***","@if@2","SQL->P25 (  {col12} ) OVER (PARTITION BY  {col38}  )","col43"
+"f(x)->P75 (  {wcc} ) OVER (PARTITION BY  {grouping}  )","wcc_75","Y","None","None","Row","N","***","@if@2","SQL->P75 (  {col12} ) OVER (PARTITION BY  {col38}  )","col44"
+"f(x)->P25 (  {theta} ) OVER (PARTITION BY  {grouping}  )","theta_25","Y","None","None","Row","N","***","@if@2","SQL->P25 (  {col11} ) OVER (PARTITION BY  {col38}  )","col45"
+"f(x)->P75 (  {theta} ) OVER (PARTITION BY  {grouping}  )","theta_75","Y","None","None","Row","N","***","@if@2","SQL->P75 (  {col11} ) OVER (PARTITION BY  {col38}  )","col46"
+"f(x)->{x_25} -( {out_limit} *( {x_75} - {x_25} ))","x_lolimit","Y","None","None","Row","N","***","@if@3","SQL->{col39} -( {col47} *( {col40} - {col39} ))","col48"
+"f(x)->{y_25} -( {out_limit} *(  {y_75} -  {y_25} ))","y_lolimit","Y","None","None","Row","N","***","@if@3","SQL->{col41} -( {col47} *(  {col42} -  {col41} ))","col49"
+"f(x)->{wcc_25} -( {out_limit} *(  {wcc_75} -  {wcc_25} ))","wcc_lolimit","Y","None","None","Row","N","***","@if@3","SQL->{col43} -( {col47} *(  {col44} -  {col43} ))","col50"
+"f(x)->{theta_25} -( {out_limit} *(  {theta_75} -  {theta_25} ))","theta_lolimit","Y","None","None","Row","N","***","@if@3","SQL->{col45} -( {col47} *(  {col46} -  {col45} ))","col51"
+"f(x)->{x_75} +( {out_limit} *( {x_75} - {x_25} ))","x_hilimit","Y","None","None","Row","N","***","@if@3","SQL->{col40} +( {col47} *( {col40} - {col39} ))","col52"
+"f(x)->{y_75} +( {out_limit} *(  {y_75} -  {y_25} ))","y_hilimit","Y","None","None","Row","N","***","@if@3","SQL->{col42} +( {col47} *(  {col42} -  {col41} ))","col53"
+"f(x)->{wcc_75} +( {out_limit} *(  {wcc_75} -  {wcc_25} ))","wcc_hilimit","Y","None","None","Row","N","***","@if@3","SQL->{col44} +( {col47} *(  {col44} -  {col43} ))","col54"
+"f(x)->{theta_75} +( {out_limit} *(   {theta_75} -   {theta_25} ))","theta_hilimit","Y","None","None","Row","N","***","@if@3","SQL->{col46} +( {col47} *(   {col46} -   {col45} ))","col55"
+"f(x)->CASE WHEN  ((  {x_offset} >   {x_hilimit}) | (  {x_offset} <   {x_lolimit} )) THEN 1 ELSE 0 END","x_flagged","Y","None","None","Row","N","***","@if@4","SQL->CASE WHEN  ((  {col13} >   {col52}) | (  {col13} <   {col48} )) THEN 1 ELSE 0 END","col56"
+"f(x)->CASE WHEN  (( {y_offset} >  {y_hilimit}) | ( {y_offset} <  {y_lolimit} )) THEN 1 ELSE 0 END","y_flagged","Y","None","None","Row","N","***","@if@4","SQL->CASE WHEN  (( {col14} >  {col53}) | ( {col14} <  {col49} )) THEN 1 ELSE 0 END","col57"
+"f(x)->CASE WHEN  ((  {wcc} >   {wcc_hilimit} ) | (  {wcc} <   {wcc_lolimit} )) THEN 1 ELSE 0 END","wcc_flagged","Y","None","None","Row","N","***","@if@4","SQL->CASE WHEN  ((  {col12} >   {col54} ) | (  {col12} <   {col50} )) THEN 1 ELSE 0 END","col58"
+"f(x)->CASE WHEN  ((  {theta} >  {theta_hilimit} ) | (  {theta} <   {theta_lolimit} )) THEN 1 ELSE 0 END","theta_flagged","Y","None","None","Row","N","***","@if@4","SQL->CASE WHEN  ((  {col11} >  {col55} ) | (  {col11} <   {col51} )) THEN 1 ELSE 0 END","col59"
+"f(x)->CASE WHEN ([x_flagged] == 1) | ([y_flagged] == 1) | ([wcc_flagged] == 1) | ([theta_flagged] == 1) THEN 1 ELSE 0 END","flagged","Y","None","None","Row","N","***","@if@5","SQL->CASE WHEN ([x_flagged] == 1) | ([y_flagged] == 1) | ([wcc_flagged] == 1) | ([theta_flagged] == 1) THEN 1 ELSE 0 END","col65"
+"f(x)->SUM({flagged}) OVER (PARTITION BY {grouping}, {lot})","sum_flagged","Y","None","None","Row","N","***","@if@6","SQL->SUM({col65}) OVER (PARTITION BY {col38}, {col7})","col61"
+"f(x)->(COUNT({visual_id}) OVER (PARTITION BY {grouping}, {lot})) * 1.0","qty","Y","None","None","Row","F","***","@if@6","SQL->(COUNT({col8}) OVER (PARTITION BY {col38}, {col7})) * 1.0","col62"
+"f(x)->({sum_flagged} /  {qty}) *100","outlier_pct","Y:3","None","None","Row","F","***","@if@7","SQL->({col61} /  {col62}) *100","col63"
+"JOINGRID:"
+"FILTERGRID:"
+"AND","","a0.entity","Like","'GSC%'","","","c","csv","SQL->a0.[entity]",""
+"-- AND","","f(x)->{outlier_pct}",">","0","","","nx","@IF@8","SQL->{col63}",""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/END_EMBED
+/EMBED=VG2;unit_kill
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","No"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","No"
+"TERMINAL:","Yes"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:",""
+"EXCEL:","unit_killed.csv"
+"ROW:","No"
+"EMBED:","Y"
+"JOINDUCKDB:","N"
+"INCNESTUTIL:","N"
+"QUERYROWS:","16"
+"JOINROWS:","1"
+"FILTERROWS:","3"
+"COL_ID_COUNTER:","20"
+"CHART_COUNTER:","0"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","2"
+"CL_SITE","KM</@#;><<<CL_SITE>>>"
+"STUCK","5</@#;><<<STUCK>>>"
+"LIMIT","0.25</@#;><<<LIMIT>>>"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->RoboCopy:Y@EXEDIR@\RoboCopy.va <~>prod_kill.csv<~> <~>\\AZatshfs.intel.com\AZatanalysis$\MAOATM\Config\VF_POR_Cfg\ICM_PCS\ICMPCS_GE_Signal_CSR_CAM<~> <~>.\<~> <~>5<~> <~>5<~> <~>Y<~> <~><~> <~>N<~>"
+"UTILITIESDESC:","copy kill prod"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->RoboCopy:Y@EXEDIR@\RoboCopy.va <~>DispoByScreenDataFile.csv<~> <~>\\datagrovekm.kssm.intel.com\AED_HYBRID_SCREENING\ScreenData\BDW_CAM_OUTLIER_11829695\DiePlacementOffset<~> <~>.<~> <~>5<~> <~>5<~> <~>N<~> <~><~> <~>N<~>"
+"UTILITIESDESC:","copy dispo"
+"<---- New Query ---->","1:5:SQL"
+"TABLEGRID:","2"
+"","prod_kill.csv a1",""
+"","flagged_data.csv a0",""
+"MARSNODE:","Default"
+"ARIESNODE:","Default"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","Default"
+"DATABASETYPE:","SQLite"
+"SINGLENODE:","TEXT (SQLite)"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Fetching Text (SQLite) Data"
+"DISTINCT:","Yes"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"PREPROCESS_CSV:","No"
+"NOHDRS:","No"
+"CARTESIAN:","No"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rows-In-File:Y{ROWS-IN-FILE} <~>unit_killed.csv<~> <~>RowsInFile<~> <~>N<~> <~><~>"
+"UTILITIESDESC:","Count Rows in a File"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>RowsInFile<~> <~>GT<~> <~>0<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","Apply Conditional Logic"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File:Yconcat.py<SOF><{><}>import pandas as pd<{><}>import os<{><}><{><}><{><}>current_dir = os.getcwd()<{><}><{><}>dispo = pd.read_csv('./DispoByScreenDataFile.csv',usecols=lambda x: x.strip().lower() == 'visualid')<{><}>kill = pd.read_csv('./unit_killed.csv',usecols=lambda x: x.strip().lower() == 'visualid')<{><}>dispo.columns = ['VisualId']<{><}>kill.columns = ['VisualId']<{><}>result = pd.concat([dispo, kill], ignore_index=True)<{><}>result = result.dropna(subset=['VisualId'])<{><}>result['VisualId'] = result['VisualId'].astype(str).str.strip()<{><}>result = result[result['VisualId'] != '']<{><}>result = result.drop_duplicates(subset=['VisualId'], keep='first')<{><}>result.to_csv('./dispo_append.csv', index=False)"
+"UTILITIESDESC:","Write Text to a file. Optionally use <EOF> to mark end of file"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Python:Y@EXEDIR@\Run_Python_Script.va <~>concat.py<~> <~><~> <~>N<~> <~><<<SPF-APP-SERVER>>><~> <~>Python-v3<~>"
+"UTILITIESDESC:","Run Python script"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"a1.product","product","Y","None","None","Row","c","","csv","SQL->a1.[product]","col15"
+"a0.ww","ww","Y","None","None","Row","c","","csv","SQL->a0.[ww]","col1"
+"a0.link_id","link_id","Y","None","None","Row","c","","csv","SQL->a0.[link_id]","col2"
+"a0.prodgroup3","prodgroup3","Y","None","None","Row","c","","csv","SQL->a0.[prodgroup3]","col3"
+"a0.lot","lot","Y","None","None","Row","c","","csv","SQL->a0.[lot]","col4"
+"a0.visual_id","VisualId","Y","None","None","Row","c","","csv","SQL->a0.[visual_id]","col9"
+"f(x)->x_offset","x_offset","Y","None","None","Row","f","x_offset","csv","SQL->CASE WHEN a0.[x_offset] = '' THEN NULL ELSE CAST (a0.[x_offset] AS REAL) END","col5"
+"f(x)->y_offset","y_offset","Y","None","None","Row","f","y_offset","csv","SQL->CASE WHEN a0.[y_offset] = '' THEN NULL ELSE CAST (a0.[y_offset] AS REAL) END","col6"
+"f(x)->wcc","wcc","Y","None","None","Row","f","wcc","csv","SQL->CASE WHEN a0.[wcc] = '' THEN NULL ELSE CAST (a0.[wcc] AS REAL) END","col7"
+"f(x)->theta","theta","Y","None","None","Row","f","theta","csv","SQL->CASE WHEN a0.[theta] = '' THEN NULL ELSE CAST (a0.[theta] AS REAL) END","col8"
+"f(x)->CASE WHEN (!!!!!    (ABS({x_offset}) >= 45 AND ABS({wcc}) >= 55) OR!!!!!    (ABS({y_offset}) >= 45 AND ABS({wcc}) >= 55) OR!!!!!    (ABS({x_offset}) >= 40 AND ABS({y_offset}) >= 40 AND ABS({wcc}) >= 65)!!!!!)!!!!!THEN 'A' !!!!!!!!!!ELSE 'N' END","A_status","Y","None","None","Row","C","***","@if@1","SQL->CASE WHEN (!!!!!    (ABS({col5}) >= 45 AND ABS({col7}) >= 55) OR!!!!!    (ABS({col6}) >= 45 AND ABS({col7}) >= 55) OR!!!!!    (ABS({col5}) >= 40 AND ABS({col6}) >= 40 AND ABS({col7}) >= 65)!!!!!)!!!!!THEN 'A' !!!!!!!!!!ELSE 'N' END","col10"
+"f(x)->CASE WHEN (!!!!!    (ABS({x_offset}) >= 40 AND ABS({wcc}) >= 47) OR!!!!!    (ABS({y_offset}) >= 40 AND ABS({wcc}) >= 47) OR!!!!!    (ABS({x_offset}) >= 30 AND ABS({y_offset}) >= 30 AND ABS({wcc}) >= 65) OR!!!!!    (ABS( {theta} )>=0.65)!!!!!!!!!!)!!!!!THEN 'B'!!!!!ELSE 'N'!!!!!END","B_status","Y","None","None","Row","C","***","@if@1","SQL->CASE WHEN (!!!!!    (ABS({col5}) >= 40 AND ABS({col7}) >= 47) OR!!!!!    (ABS({col6}) >= 40 AND ABS({col7}) >= 47) OR!!!!!    (ABS({col5}) >= 30 AND ABS({col6}) >= 30 AND ABS({col7}) >= 65) OR!!!!!    (ABS( {col8} )>=0.65)!!!!!!!!!!)!!!!!THEN 'B'!!!!!ELSE 'N'!!!!!END","col13"
+"f(x)->CASE WHEN (!!!!!    (ABS({x_offset}) >= 40 AND ABS({wcc}) >= 47) OR!!!!!    (ABS({y_offset}) >= 30 AND ABS({wcc}) >= 37) OR!!!!!    (ABS({y_offset}) >= 20 AND ABS({y_offset}) >= 20 AND ABS({wcc}) >= 45) OR!!!!!    (ABS( {theta} )>=0.65) OR!!!!!    (ABS ({x_offset}) >= 25 AND ABS ({theta}) >= 0.1 AND ABS({wcc}) >= 50) OR!!!!!    (ABS ({y_offset}) >= 25 AND ABS ({theta}) >= 0.1 AND ABS({wcc}) >= 50) !!!!!!!!!!)!!!!!THEN 'C'!!!!!ELSE 'N'!!!!!END","C_status","Y","None","None","Row","C","***","@if@1","SQL->CASE WHEN (!!!!!    (ABS({col5}) >= 40 AND ABS({col7}) >= 47) OR!!!!!    (ABS({col6}) >= 30 AND ABS({col7}) >= 37) OR!!!!!    (ABS({col6}) >= 20 AND ABS({col6}) >= 20 AND ABS({col7}) >= 45) OR!!!!!    (ABS( {col8} )>=0.65) OR!!!!!    (ABS ({col5}) >= 25 AND ABS ({col8}) >= 0.1 AND ABS({col7}) >= 50) OR!!!!!    (ABS ({col6}) >= 25 AND ABS ({col8}) >= 0.1 AND ABS({col7}) >= 50) !!!!!!!!!!)!!!!!THEN 'C'!!!!!ELSE 'N'!!!!!END","col14"
+"a1.rule","rule","Y","None","None","Row","c","","csv","SQL->a1.[rule]","col18"
+"f(x)->CASE WHEN  {rule} ==    {a_status} THEN '1'!!!!!WHEN  {rule} ==     {b_status} THEN '1'!!!!!WHEN  {rule} ==   {c_status} THEN '1'!!!!!!!!!!!!!!!!!!!! ELSE 0 END","kill_flagged","Y","None","None","Row","N","***","@if@1","All->CASE WHEN  {col18} ==    {col10} THEN '1'!!!!!WHEN  {col18} ==     {col13} THEN '1'!!!!!WHEN  {col18} ==   {col14} THEN '1'!!!!!!!!!!!!!!!!!!!! ELSE 0 END","col19"
+"a0.outlier_pct","outlier_pct","Y","None","None","Row","c","","csv","SQL->a0.[outlier_pct]","col20"
+"JOINGRID:"
+"AND","","Sqlite->a0.prodgroup3                                                                                                    : SQL->{col3}","=","Sqlite->a1.product                                                                                                    : SQL->{col15}",""
+"FILTERGRID:"
+"-- AND","","a0.visual_id","In","'2R612052A03092'</comma\>'2R612052A03067'","","","c","csv","SQL->a0.[visual_id]",""
+"AND","","f(x)->{kill_flagged}",">","0","","","nx","@IF@2","All->{col19}",""
+"AND","","a0.outlier_pct",">","'<<<LIMIT>>>'","","","c","csv","SQL->a0.[outlier_pct]",""
+
+/END_EMBED
+/EMBED=VG2;unit_kill_final
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","No"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","No"
+"TERMINAL:","Yes"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:",""
+"EXCEL:","DispoByScreenDataFile.csv"
+"ROW:","No"
+"EMBED:","Y"
+"JOINDUCKDB:","N"
+"INCNESTUTIL:","N"
+"QUERYROWS:","4"
+"JOINROWS:","1"
+"FILTERROWS:","2"
+"COL_ID_COUNTER:","4"
+"CHART_COUNTER:","0"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","2"
+"CL_SITE","KM</@#;><<<CL_SITE>>>"
+"STUCK","5</@#;><<<STUCK>>>"
+"LIMIT","0.25</@#;><<<LIMIT>>>"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Write-File2:NTT<SOF><{><}>This prepost query pull unit status at the last operation. If status=0, means unit is still tagged as good. <{><}>Keep the unit in the edispo file."
+"UTILITIESDESC:","readme"
+"<---- New Query ---->","1:5:SQL"
+"TABLEGRID:","1"
+"","dispo_append.csv a0",""
+"MARSNODE:","Default"
+"ARIESNODE:","<<<ARIES>>>"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","Default"
+"DATABASETYPE:","SQLite"
+"SINGLENODE:","TEXT (SQLite)"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Fetching Text (SQLite) Data"
+"DISTINCT:","No"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"PREPROCESS_CSV:","No"
+"NOHDRS:","No"
+"CARTESIAN:","No"
+"<---- New Query ---->","2:2:a1"
+"TABLEGRID:","1"
+"","ULT_AT",""
+"MARSNODE:","Default"
+"ARIESNODE:","<<<ARIES>>>"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","Default"
+"DATABASETYPE:","Oracle"
+"SINGLENODE:","<<<ARIES>>>"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Fetching ARIES Data"
+"DISTINCT:","No"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"PARALLEL:","0"
+"IGNOREINCSUM:","No"
+"FIRST_ROWS:","No"
+"ORDERED:","No"
+"OTHER-HINT:","No"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->RoboCopy:N@EXEDIR@\RoboCopy.va <~>DispoByScreenDataFile.csv<~> <~>.<~> <~>\\datagrovekm.kssm.intel.com\AED_HYBRID_SCREENING\ScreenData\BDW_CAM_OUTLIER_11829695\DiePlacementOffset<~> <~>5<~> <~>5<~> <~>N<~> <~><~> <~>N<~>"
+"UTILITIESDESC:","Robocopy Files/Folders"
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"a0.visualid","visualid","Y","None","None","Row","c","","csv","SQL->a0.[visualid]","col1"
+"a1.visual_id","visual_id","Y","None","None","Row","c","Visual ID","aries_ube_unit_hist2","a1->u0.visualid","col2"
+"a1.unit_process_date","unit_process_date","Y","None","Max","Row","d","Unit Process Date","aries_ube_unit_hist2","a1->u0.unit_process_date","col3"
+"a1.status","status","Y","None","Max","Row","n","Status of the unit being uploaded from ULT. 0 means unit is good and non-zero implies the unit was rejected. Actual values, other than 0, are module specific","aries_ube_unit_hist2","a1->u0.status_id","col4"
+"JOINGRID:"
+"AND","","Sqlite->a0.visualid                                                                                                    : SQL->{col1}","=","View->a1.visual_id                                                                                                    : a1->{col2}",""
+"FILTERGRID:"
+"AND","","a1.visual_id","In Temp"," {Sqlite (all)} : Sqlite->a0.visualid","",".","c","aries_ube_unit_hist2","a1->u0.visualid","SQL->{col1}"
+"AND","","a1.status","=","0","","","n","aries_ube_unit_hist2","a1->u0.status_id",""
+
+
+
+
+
+
+
+
+
+/END_EMBED
+/EMBED=VG2;theta_repeat_counts
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","Yes"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","No"
+"TERMINAL:","Yes"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:",""
+"EXCEL:","theta_repeat_counts.csv"
+"ROW:","No"
+"EMBED:","Y"
+"JOINDUCKDB:","N"
+"INCNESTUTIL:","N"
+"QUERYROWS:","8"
+"JOINROWS:","3"
+"FILTERROWS:","7"
+"COL_ID_COUNTER:","9"
+"CHART_COUNTER:","0"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","0"
+"CL_SITE","KM</@#;><<<CL_SITE>>>"
+"<---- New Query ---->","1:5:SQL"
+"TABLEGRID:","2"
+"","flagged_data.csv a0",""
+"","final_data.csv a1",""
+"MARSNODE:","Default"
+"ARIESNODE:","Default"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","Default"
+"DATABASETYPE:","SQLite"
+"SINGLENODE:","TEXT (SQLite)"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Fetching Text (SQLite) Data"
+"DISTINCT:","Yes"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"PREPROCESS_CSV:","No"
+"NOHDRS:","No"
+"CARTESIAN:","No"
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"a0.lot","lot","P","None","None","Row","c","","csv","SQL->a0.[lot]","col1"
+"f(x)->CAST(a0.[theta] AS REAL)","theta_value","Y","None","None","Row","F","","csv","SQL->CAST(a0.[theta] AS REAL)","col2"
+"a0.visual_id","repeat_qty","Y","None","Count Distinct","Row","c","","csv","SQL->a0.[visual_id]","col3"
+"a1.test_end_date","final_test_end_date","P","None","None","Row","c","","csv","SQL->a1.[test_end_date]","col5"
+"a1.lot","final_lot","P","None","None","Row","c","","csv","SQL->a1.[lot]","col6"
+"a0.test_end_date","test_end_date","Y","None","None","Row","c","","csv","SQL->a0.[test_end_date]","col7"
+"a0.grouping","grouping","Y","None","None","Row","c","","csv","SQL->a0.[grouping]","col8"
+"a1.grouping","final_grouping","P","None","None","Row","c","","csv","SQL->a1.[grouping]","col9"
+"JOINGRID:"
+"AND","","Sqlite->a0.lot : SQL->{col1}","=","Sqlite->a1.lot : SQL->{col6}",""
+"AND","","Sqlite->a0.test_end_date : SQL->{col7}","=","Sqlite->a1.test_end_date : SQL->{col5}",""
+"AND","","Sqlite->a0.grouping : SQL->{col8}","=","Sqlite->a1.grouping : SQL->{col9}",""
+"FILTERGRID:"
+"AND","","f(x)->NULLIF(TRIM(a0.[test_end_date]), '')","Is Not Null","","","","c","csv","SQL->NULLIF(TRIM(a0.[test_end_date]), '')",""
+"AND","","a1.lot","Is Not Null","","","","c","csv","SQL->a1.[lot]",""
+"AND","","f(x)->CAST(a0.[outlier_pct] AS REAL)",">","<<<LIMIT>>>","","","f","csv","SQL->CAST(a0.[outlier_pct] AS REAL)",""
+"AND","","f(x)->CAST(a0.[theta_flagged] AS REAL)","=","1","","","f","csv","SQL->CAST(a0.[theta_flagged] AS REAL)",""
+"AND","","f(x)->NULLIF(TRIM(a0.[theta]), '')","Is Not Null","","","","c","csv","SQL->NULLIF(TRIM(a0.[theta]), '')",""
+"AND","","f(x)->NULLIF(TRIM(a0.[visual_id]), '')","Is Not Null","","","","c","csv","SQL->NULLIF(TRIM(a0.[visual_id]), '')",""
+"AND","","f(x)->NULLIF(TRIM(a0.[lot]), '')","Is Not Null","","","","c","csv","SQL->NULLIF(TRIM(a0.[lot]), '')",""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/END_EMBED
+/EMBED=VG2;theta_repeat_email
+"VERSION:","1.0"
+"OUTERJOIN:","Yes"
+"UNIONSORT:","No"
+"DISTINCT:","Yes"
+"QUOTECSV:","No"
+"CTMISSJOIN:","No"
+"EMPTYNULL:","No"
+"TERMINAL:","Yes"
+"OUTENABLED:","Yes"
+"INLINE_VIEW:",""
+"LASTPACKEDEXE:",""
+"EXCEL:","theta_repeat_email.csv"
+"ROW:","No"
+"EMBED:","Y"
+"JOINDUCKDB:","N"
+"INCNESTUTIL:","N"
+"QUERYROWS:","14"
+"JOINROWS:","7"
+"FILTERROWS:","6"
+"COL_ID_COUNTER:","18"
+"CHART_COUNTER:","0"
+"PIVOTMODE:","0"
+"SQLITESPECIALHDRS:","0"
+"LEGACYPIVOTHDRS:","0"
+"USEPYENGINE:","Y"
+"GLOBALS_FILE:",""
+"GLOBAL_VARS:","2"
+"CL_SITE","KM</@#;><<<CL_SITE>>>"
+"STUCK","5</@#;><<<STUCK>>>"
+"LIMIT","0.25</@#;><<<LIMIT>>>"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Pre/Post Query:Y{theta_repeat_counts}</@#;>theta_repeat_counts"
+"UTILITIESDESC:","Count distinct outlier units by grouping, test end time, and numeric theta"
+"<---- New Query ---->","1:5:SQL"
+"TABLEGRID:","4"
+"","flagged_data.csv a0",""
+"","theta_repeat_counts.csv a1",""
+"","final_data.csv a2",""
+"","cam_lot_list.csv a3",""
+"MARSNODE:","Default"
+"ARIESNODE:","Default"
+"OASYSNODE:","Default"
+"ARIESCLASSNODE:","ATD.ARIES"
+"OTHERNODE:","TEXT (SQLite)"
+"MARSSCHEMA:","Default"
+"DATABASETYPE:","SQLite"
+"SINGLENODE:","TEXT (SQLite)"
+"SINGLESCHEMA:","N/A"
+"PROMPT-TEXT:","Fetching Text (SQLite) Data"
+"DISTINCT:","Yes"
+"ROW:","No"
+"EXCEL:","No"
+"CT_MISS_VAL:","No"
+"PREPROCESS_CSV:","No"
+"NOHDRS:","No"
+"CARTESIAN:","No"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->Rows-In-File:Y{ROWS-IN-FILE} <~>theta_repeat_email.csv<~> <~>THETA_EMAIL_ROWS<~> <~>N<~> <~><~>"
+"UTILITIESDESC:","Count repeating-theta email rows"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->If-Then:Y{IF-THEN} <~>THETA_EMAIL_ROWS<~> <~>GT<~> <~>0<~> <~><~> <~><~> <~><~> <~><~>"
+"UTILITIESDESC:","Send only when repeated outlier theta is found"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->HTML-Report:YYN44901"
+"UTILITIESDESC:","Email centered move-out time, lot, grouping, trigger count, and theta summary"
+"HTML-BEGIN",""
+"HTML-SCRIPT"
+"HTML-REPCSS:THETA_EMAIL_CSS</@#;>Theta Email CSS</@#;>"
+"
+"
+"Type<\\>Key<\\>COL1<\\>COL2<\\>COL3<\\>COL4<\\>COL5<\\>COL6<\\>COL7<\\>COL8"
+"TYPE<\\>CSS<\\><\\><\\><\\><\\><\\><\\><\\>"
+"CSS<\\>sqlpathfinder_style_1.css<\\><\\><\\><\\><\\><\\><\\><\\>"
+"FORMAT<\\>Column-Headers<\\>background-color:#dbd9c0<\\>color:#444<\\>font-family:Arial<\\>font-size:12<\\>font-style:normal<\\>font-weight:bold<\\>text-align:left<\\>text-decoration:normal<\\>vertical-align:middle"
+"FORMAT<\\>Column-Data<\\>background-color:white<\\>color:#444<\\>font-family:Arial<\\>font-size:12<\\>font-style:normal<\\>text-align:left<\\>vertical-align:middle<\\>"
+"FORMAT<\\>Column-Alt-Row<\\>background-color:#f7f5dc<\\>color:#333<\\>font-family:Arial<\\>font-size:12<\\>font-style:normal<\\>text-align:left<\\>vertical-align:middle<\\>"
+"FORMAT<\\>At-Top-of-Report<\\>background-color:white<\\>color:#444<\\>font-family:Arial<\\>font-size:15<\\>font-style:normal<\\>font-weight:bold<\\>text-align:center<\\>vertical-align:middle"
+"FORMAT<\\>At-Top-of-Col1<\\>background-color:white<\\>color:#444<\\>font-family:Arial<\\>font-size:12<\\>font-style:normal<\\>font-weight:bold<\\>text-align:left<\\>vertical-align:middle"
+"FORMAT<\\>At-Top-of-Col2<\\>background-color:white<\\>color:#444<\\>font-family:Arial<\\>font-size:12<\\>font-style:normal<\\>font-weight:bold<\\>text-align:left<\\>vertical-align:middle"
+"FORMAT<\\>At-Top-of-Col3<\\>background-color:white<\\>color:#444<\\>font-family:Arial<\\>font-size:12<\\>font-style:normal<\\>font-weight:bold<\\>text-align:left<\\>vertical-align:middle"
+"FORMAT<\\>JQX-All-IChart-Text<\\>background-color:white<\\>color:black<\\>font-family:Verdana<\\>font-size:11<\\>font-style:normal<\\>font-weight:normal<\\>text-align:left<\\>vertical-align:middle"
+"FORMAT<\\>COLUMN-BORDER<\\>border-color:#cc9<\\>border-collapse:collapse<\\>border-style:solid<\\>border-width:1px<\\>border-spacing:4px<\\><\\><\\>"
+"HTML-REPORT-SPEC-END"
+"HTML-REPORT:THETA_REPEAT_DETAILS</@#;>Theta Repeat Details</@#;>"
+"
+"
+"Type<\\>Key<\\>COL1<\\>COL2<\\>COL3<\\>COL4<\\>COL5<\\>COL6<\\>COL7<\\>COL8<\\>COL9<\\>COL10<\\>COL11<\\>COL12"
+"TYPE<\\>HTML<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"INPUT-FILE<\\>theta_repeat_email.csv<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"OUTPUT-FILE<\\>theta_repeat_email.htm<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"CSS<\\>sqlpathfinder_style_1.css<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"COLSPAN<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DRILLDOWN<\\>N<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DYNAMICSORT<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"DYNAMICFILTER<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"ATTOPDRILLDOWN<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"NOPREPROCESS<\\>Y<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"SORT<\\>move_out_time<\\>Asc<\\>N<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"SORT<\\>lot<\\>Asc<\\>Y<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"SORT<\\>grouping<\\>Asc<\\>Y<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"SORT<\\>theta<\\>Asc<\\>Y<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"AT-TOP-OF-REPORT<\\><\\>Repeating theta outliers by grouping and test end time<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"COLUMN-DATA<\\><\\>move_out_time<\\>lot<\\>grouping<\\>repeat_qty<\\>theta<\\><\\><\\><\\><\\><\\><\\>"
+"COLUMN-HEADERS<\\><\\>Move Out Time<\\>Lot Number<\\>Grouping<\\>Number of Trigger<\\>Theta<\\><\\><\\><\\><\\><\\><\\>"
+"COLUMN-ALIGNMENT<\\><\\>middle-center<\\>middle-center<\\>middle-center<\\>middle-center<\\>middle-center<\\><\\><\\><\\><\\><\\><\\>"
+"COLUMN-FORMAT<\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\><\\>"
+"HTML-REPORT-SPEC-END"
+"HTML-CREATE WINDOW:THETA_REPEAT_NOTICE</@#;>0@@@EMAIL:self@@@sqlpathfinder_style_1.css@@@E->Y@@@RR->NO@@@B->Y@@@EM-A->@@@EM-S->@@@SEC->Y@@@Text:1:white<:>black<:>N<:>N<:>N<:>Arial<:>11<:>Center<:><style>table{margin-left:auto<-s-c->margin-right:auto}table.tblout{width:100%}td.tblout:empty{display:none}</style>Email-only alert: at least <<<STUCK>>> distinct units share an outlier theta within the same grouping and test end time; intervening theta values are allowed. Each listed unit has an outlier percentage above <<<LIMIT>>>%.|THETA_REPEAT_DETAILS:1@@@</@#;>Theta Repeat Notice</@#;>CAM repeating theta outliers - <<<CL_SITE>>>"
+"HTML-END"
+"<---- New Query ---->","5:3:UTILITIES"
+"UTILITIES:","U->End-If:Y{END-IF}"
+"UTILITIESDESC:",""
+"<---- New Query ---->","-99"
+"QUERYGRID:"
+"a0.grouping","grouping","Y","None","None","Row","c","","csv","SQL->a0.[grouping]","col15"
+"a0.lot","lot","Y","Asc","None","Row","c","","csv","SQL->a0.[lot]","col1"
+"a0.visual_id","vid","P","None","None","Row","c","","csv","SQL->a0.[visual_id]","col2"
+"f(x)->CAST(a0.[theta] AS REAL)","theta","Y","None","None","Row","F","","csv","SQL->CAST(a0.[theta] AS REAL)","col4"
+"f(x)->CAST(a1.[repeat_qty] AS INTEGER)","repeat_qty","Y","None","None","Row","N","","csv","SQL->CAST(a1.[repeat_qty] AS INTEGER)","col5"
+"a1.grouping","repeat_grouping","P","None","None","Row","c","","csv","SQL->a1.[grouping]","col7"
+"f(x)->CAST(a1.[theta_value] AS REAL)","repeat_theta","P","None","None","Row","F","","csv","SQL->CAST(a1.[theta_value] AS REAL)","col8"
+"a2.test_end_date","final_test_end_date","P","None","None","Row","c","","csv","SQL->a2.[test_end_date]","col11"
+"a2.lot","final_lot","P","None","None","Row","c","","csv","SQL->a2.[lot]","col12"
+"a0.test_end_date","test_end_date","P","None","None","Row","c","","csv","SQL->a0.[test_end_date]","col13"
+"a1.test_end_date","repeat_test_end_date","P","None","None","Row","c","","csv","SQL->a1.[test_end_date]","col14"
+"a2.grouping","final_grouping","P","None","None","Row","c","","csv","SQL->a2.[grouping]","col16"
+"a3.out_date","move_out_time","Y","Asc","None","Row","c","","csv","SQL->a3.[out_date]","col17"
+"a3.lot","move_out_lot","P","None","None","Row","c","","csv","SQL->a3.[lot]","col18"
+"JOINGRID:"
+"AND","","Sqlite->a0.test_end_date : SQL->{col13}","=","Sqlite->a1.test_end_date : SQL->{col14}",""
+"AND","","Sqlite->a0.grouping : SQL->{col15}","=","Sqlite->a1.grouping : SQL->{col7}",""
+"AND","","Sqlite->f(x)->theta : SQL->{col4}","=","Sqlite->f(x)->repeat_theta : SQL->{col8}",""
+"AND","","Sqlite->a0.test_end_date : SQL->{col13}","=","Sqlite->a2.test_end_date : SQL->{col11}",""
+"AND","","Sqlite->a0.lot : SQL->{col1}","=","Sqlite->a2.lot : SQL->{col12}",""
+"AND","","Sqlite->a0.grouping : SQL->{col15}","=","Sqlite->a2.grouping : SQL->{col16}",""
+"AND","","Sqlite->a0.lot : SQL->{col1}","=","Sqlite->a3.lot : SQL->{col18}",""
+"FILTERGRID:"
+"AND","","a2.lot","Is Not Null","","","","c","csv","SQL->a2.[lot]",""
+"AND","","f(x)->CAST(a1.[repeat_qty] AS INTEGER)",">=","<<<STUCK>>>","","","f","csv","SQL->CAST(a1.[repeat_qty] AS INTEGER)",""
+"AND","","f(x)->CAST(a0.[theta_flagged] AS REAL)","=","1","","","f","csv","SQL->CAST(a0.[theta_flagged] AS REAL)",""
+"AND","","f(x)->CAST(a0.[outlier_pct] AS REAL)",">","<<<LIMIT>>>","","","f","csv","SQL->CAST(a0.[outlier_pct] AS REAL)",""
+"AND","","f(x)->NULLIF(TRIM(a0.[visual_id]), '')","Is Not Null","","","","c","csv","SQL->NULLIF(TRIM(a0.[visual_id]), '')",""
+"AND","","f(x)->NULLIF(TRIM(a0.[lot]), '')","Is Not Null","","","","c","csv","SQL->NULLIF(TRIM(a0.[lot]), '')",""
+
+
+
+
+
+
+
+
+
+
+/END_EMBED
+/END_EMBED_ALL
